@@ -1,4 +1,3 @@
-
 package pl.webapplicationservlet.main;
 
 import java.io.IOException;
@@ -12,7 +11,7 @@ import pl.resources.Osoba;
 
 public class MainServlet extends HttpServlet {
 
-    
+    ArrayList<Osoba> li = new ArrayList<Osoba>();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -49,18 +48,32 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        ArrayList<Osoba> li = new ArrayList<Osoba>();
-        li.add(new Osoba(request.getParameter("Imie"), Integer.parseInt(request.getParameter("Wiek"))));
-        getServletContext().setAttribute("lista", li);
+        int wiek;
         PrintWriter out = response.getWriter();
+        try {
+            wiek = Integer.parseInt(request.getParameter("Wiek"));
+            li.add(new Osoba(request.getParameter("Imie"), wiek));
 
-        out.println("<html>");
-        out.println("<body>");
-        out.println("Dodano uzytkownika!");
-        out.println("<form action=\"http://localhost:8080/WebApplication3FT\"><input type=\"submit\" value=\"Powrot\"></form>");
-        out.println("</body>");
-        
+            getServletContext().setAttribute("lista", li);
+            
+
+            out.println("<html>");
+            out.println("<body style=\"background-color:#2ECC71;text-align:center;\">");
+            out.println("<div style=\"color:white;font-weight:600;margin:30px;font-size:50px;\">Pomyslnie dodano uzytkownika!</div>");
+            out.println("<form "                   
+                    + "action=\"http://localhost:8080/WebApplication3FT\">"
+                    + "<input style=\"margin:20px;color:white;font-weight:700;width:100px;height:50px;background-color:#273746;border-radius:5px;border:none;\"  type=\"submit\" value=\"Powrot\"></form>");
+            out.println("</body>");
+        } catch (Exception e) {
+            out.println("<html>");
+            out.println("<body style=\"background-color:#E74C3C;text-align:center;\">");
+            out.println("<div style=\"color:white;font-weight:600;margin:30px;font-size:50px;\">Blad: " + e +"</div>");
+            out.println("<form "                   
+                    + "action=\"http://localhost:8080/WebApplication3FT\">"
+                    + "<input style=\"margin:20px;color:white;font-weight:700;width:100px;height:50px;background-color:#273746;border-radius:5px;border:none;\"  type=\"submit\" value=\"Powrot\"></form>");
+            out.println("</body>");        
+        }
+
     }
 
     @Override
@@ -76,7 +89,7 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         super.doDelete(req, resp);
-        
+
     }
 
     @Override

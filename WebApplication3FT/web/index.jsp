@@ -41,7 +41,7 @@
                        out.println("<td>" + item.wiek + "</td>");
                        out.println("<td>"
                                + "<form method=\"post\" action=\"DeleteServlet\">"
-                               + "<input type=\"submit\" name=\"Usun\" value=\"" + i  +"\">"
+                               + "<button style=\"background-color:#ff6347;border-radius:5px;border:none;\" name=\"Usun\" value=\"" + i  +"\">Usun<input hidden type=\"submit\"></button>"
                                + "</form>"
                                + "</td>");
                        out.println("</tr>");

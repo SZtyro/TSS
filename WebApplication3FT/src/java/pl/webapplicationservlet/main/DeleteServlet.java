@@ -75,10 +75,13 @@ public class DeleteServlet extends HttpServlet {
         ArrayList<Osoba> a = (ArrayList<Osoba>)getServletConfig().getServletContext().getAttribute("lista");
         PrintWriter out = response.getWriter();
         a.remove(Integer.parseInt((String)request.getParameter("Usun")) );
+        
         out.println("<html>");
-        out.println("<body>");
-        out.println("Pomyslnie usunieto uzytkownika!"+a.size());
-        out.println("<form action=\"http://localhost:8080/WebApplication3FT\"><input type=\"submit\" value=\"Powrot\"></form>");
+        out.println("<body style=\"background-color:#2ECC71;text-align:center;\">");
+        out.println("<div style=\"color:white;font-weight:600;margin:30px;font-size:50px;\">Pomyslnie usunieto uzytkownika!</div>");
+        out.println("<form action=\"http://localhost:8080/WebApplication3FT\"><input "
+                + "style=\"margin:20px;color:white;font-weight:700;width:100px;height:50px;background-color:#273746;border-radius:5px;border:none;\""
+                + " type=\"submit\" value=\"Powrot\"></form>");
         out.println("</body>");
     }
 
