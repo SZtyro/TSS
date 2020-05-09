@@ -84,7 +84,7 @@ public class DeleteServlet extends HttpServlet {
             out.println("<html>");
             out.println("<body style=\"background-color:#2ECC71;text-align:center;\">");
             out.println("<div style=\"color:white;font-weight:600;margin:30px;font-size:50px;\">Pomyslnie usunieto uzytkownika!</div>");
-            out.println("<form action=\"http://localhost:8080/WebApplication4FT\"><input "
+            out.println("<form action=\"https://localhost:8443/WebApplication4FT\"><input "
                     + "style=\"margin:20px;color:white;font-weight:700;width:100px;height:50px;background-color:#273746;border-radius:5px;border:none;\""
                     + " type=\"submit\" value=\"Powrot\"></form>");
             out.println("</body>");

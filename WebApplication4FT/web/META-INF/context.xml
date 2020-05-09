@@ -3,4 +3,16 @@
     <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
               maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/bazaTestowaMSSQL"
               password="tomcat" type="javax.sql.DataSource" url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcat" username="tomcatuser"/>
+   
+              <tomcat-users>
+                   <user username="tomcat" roles="manager-gui,admin, manager-script, tomcat" password="tomcat"/>
+              </tomcat-users>
+             
+    
+    <Realm className="org.apache.catalina.realm.DataSourceRealm" 
+               dataSourceName="jdbc/authority" 
+               userTable="users" 
+               userNameCol="user_name" userCredCol="user_pass" 
+               userRoleTable="user_roles" roleNameCol="role_name" />
+    
 </Context>
