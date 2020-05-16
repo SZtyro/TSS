@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" docBase="C:\Users\fabix\Desktop\TSS\WebApplicationServletAnnotation\build\web" path="/WebApplicationServletAnnotation">
+  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/bazaTestowaMSSQL" password="tomcat" type="javax.sql.DataSource" url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcat" username="tomcatuser"/>
+</Context>

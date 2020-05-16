@@ -1,0 +1,487 @@
+24-Mar-2020 15:05:09.674 WARNING [main] org.apache.catalina.core.AprLifecycleListener.init The APR based Apache Tomcat Native library failed to load. The error reported was [E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform]
+ java.lang.UnsatisfiedLinkError: E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1941)
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1857)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at org.apache.tomcat.jni.Library.<init>(Library.java:42)
+	at org.apache.tomcat.jni.Library.initialize(Library.java:178)
+	at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:198)
+	at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+	at org.apache.catalina.connector.Connector.setProtocol(Connector.java:565)
+	at org.apache.catalina.connector.Connector.<init>(Connector.java:70)
+	at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:64)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:182)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1344)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2787)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1458)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:578)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:311)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:494)
+
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.9
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 5 2016 20:18:12 UTC
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.9.0
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_91\jre
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_91-b14
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+24-Mar-2020 15:05:09.823 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9
+24-Mar-2020 15:05:09.824 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9
+24-Mar-2020 15:05:09.824 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\logging.properties
+24-Mar-2020 15:05:09.830 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Mar-2020 15:05:09.831 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+24-Mar-2020 15:05:09.831 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Mar-2020 15:05:09.831 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9
+24-Mar-2020 15:05:09.831 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9
+24-Mar-2020 15:05:09.831 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\temp
+24-Mar-2020 15:05:10.090 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+24-Mar-2020 15:05:10.176 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+24-Mar-2020 15:05:10.180 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+24-Mar-2020 15:05:10.182 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+24-Mar-2020 15:05:10.183 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 882 ms
+24-Mar-2020 15:05:10.221 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+24-Mar-2020 15:05:10.221 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.9
+24-Mar-2020 15:05:10.237 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServlet.xml
+24-Mar-2020 15:05:10.281 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:05:10.595 INFO [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowa Ignoring unknown property: value of "DB Connection" for "description" property
+24-Mar-2020 15:05:10.886 INFO [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [226] milliseconds.
+24-Mar-2020 15:05:10.907 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServlet.xml has finished in 670 ms
+24-Mar-2020 15:05:10.908 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServletAnnotation.xml
+24-Mar-2020 15:05:10.912 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:05:11.357 INFO [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowa Ignoring unknown property: value of "DB Connection" for "description" property
+24-Mar-2020 15:05:11.375 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+24-Mar-2020 15:05:11.380 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServletAnnotation.xml has finished in 472 ms
+24-Mar-2020 15:05:11.381 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\docs
+24-Mar-2020 15:05:11.409 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\docs has finished in 28 ms
+24-Mar-2020 15:05:11.409 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\examples
+24-Mar-2020 15:05:11.898 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\examples has finished in 489 ms
+24-Mar-2020 15:05:11.898 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\host-manager
+24-Mar-2020 15:05:11.933 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\host-manager has finished in 35 ms
+24-Mar-2020 15:05:11.934 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\manager
+24-Mar-2020 15:05:11.969 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\manager has finished in 35 ms
+24-Mar-2020 15:05:11.969 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\ROOT
+24-Mar-2020 15:05:11.996 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\ROOT has finished in 27 ms
+24-Mar-2020 15:05:11.999 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+24-Mar-2020 15:05:12.011 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+24-Mar-2020 15:05:12.019 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1835 ms
+24-Mar-2020 15:05:13.275 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.undeploy Undeploying context []
+24-Mar-2020 15:05:13.306 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\ROOT.xml
+24-Mar-2020 15:05:13.307 WARNING [http-nio-8080-exec-8] org.apache.catalina.core.StandardContext.setPath A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+24-Mar-2020 15:05:13.361 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\ROOT.xml has finished in 55 ms
+24-Mar-2020 15:05:13.366 INFO [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[]] after start() had already been called. The second call will be ignored.
+24-Mar-2020 15:06:28.615 INFO [http-nio-8080-exec-12] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationServlet]
+24-Mar-2020 15:06:28.636 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServlet.xml
+24-Mar-2020 15:06:28.642 WARNING [http-nio-8080-exec-15] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:06:28.698 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServlet.xml has finished in 61 ms
+24-Mar-2020 15:06:28.702 INFO [http-nio-8080-exec-8] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationServlet]] after start() had already been called. The second call will be ignored.
+24-Mar-2020 15:06:36.761 INFO [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationServlet]
+24-Mar-2020 15:06:36.780 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServlet.xml
+24-Mar-2020 15:06:36.785 WARNING [http-nio-8080-exec-15] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:06:36.834 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServlet.xml has finished in 53 ms
+24-Mar-2020 15:06:36.838 INFO [http-nio-8080-exec-18] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationServlet]] after start() had already been called. The second call will be ignored.
+24-Mar-2020 15:06:56.007 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationServlet]
+24-Mar-2020 15:13:14.040 INFO [http-nio-8080-exec-30] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml
+24-Mar-2020 15:13:14.044 WARNING [http-nio-8080-exec-30] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:13:14.082 INFO [http-nio-8080-exec-30] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml has finished in 42 ms
+24-Mar-2020 15:13:14.085 INFO [http-nio-8080-exec-31] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication!AM]] after start() had already been called. The second call will be ignored.
+24-Mar-2020 15:13:54.528 INFO [http-nio-8080-exec-28] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:13:54.572 INFO [http-nio-8080-exec-28] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:14:02.164 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/WebApplication!AM]
+24-Mar-2020 15:14:02.165 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:14:02.207 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:15:28.170 WARNING [http-nio-8080-exec-39] org.apache.catalina.deploy.NamingResourcesImpl.cleanUp Failed to retrieve JNDI naming context for container [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication!AM]] so no cleanup was performed for that container
+ javax.naming.NameNotFoundException: Name [comp/env] is not bound in this Context. Unable to find [comp].
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:816)
+	at org.apache.naming.NamingContext.lookup(NamingContext.java:173)
+	at org.apache.catalina.deploy.NamingResourcesImpl.cleanUp(NamingResourcesImpl.java:994)
+	at org.apache.catalina.deploy.NamingResourcesImpl.stopInternal(NamingResourcesImpl.java:976)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:226)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java:5425)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:226)
+	at org.apache.catalina.manager.ManagerServlet.undeploy(ManagerServlet.java:1414)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:362)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:789)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+24-Mar-2020 15:15:28.673 INFO [http-nio-8080-exec-39] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication!AM]
+24-Mar-2020 15:15:28.688 INFO [http-nio-8080-exec-48] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml
+24-Mar-2020 15:15:28.692 WARNING [http-nio-8080-exec-48] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:15:28.720 SEVERE [http-nio-8080-exec-48] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication!AM]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:467)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1617)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1483)
+	at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:336)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:789)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.IllegalArgumentException: Servlet mapping specifies an unknown servlet name MainServlet
+	at org.apache.catalina.core.StandardContext.addServletMappingDecoded(StandardContext.java:3135)
+	at org.apache.catalina.core.StandardContext.addServletMappingDecoded(StandardContext.java:3126)
+	at org.apache.catalina.startup.ContextConfig.configureContext(ContextConfig.java:1376)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1190)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:775)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5087)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 45 more
+
+24-Mar-2020 15:15:28.729 SEVERE [http-nio-8080-exec-48] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication!AM]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:467)
+	at org.apache.catalina.startup.HostConfig.check(HostConfig.java:1617)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.tomcat.util.modeler.BaseModelMBean.invoke(BaseModelMBean.java:300)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at org.apache.catalina.manager.ManagerServlet.check(ManagerServlet.java:1483)
+	at org.apache.catalina.manager.ManagerServlet.deploy(ManagerServlet.java:904)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:336)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:789)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+
+24-Mar-2020 15:15:28.811 INFO [http-nio-8080-exec-48] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml has finished in 124 ms
+24-Mar-2020 15:16:02.553 INFO [http-nio-8080-exec-46] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication!AM]
+24-Mar-2020 15:16:02.568 INFO [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml
+24-Mar-2020 15:16:02.574 WARNING [http-nio-8080-exec-49] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:16:02.608 INFO [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml has finished in 40 ms
+24-Mar-2020 15:16:02.611 INFO [http-nio-8080-exec-48] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication!AM]] after start() had already been called. The second call will be ignored.
+24-Mar-2020 15:16:16.258 INFO [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:16:16.285 INFO [http-nio-8080-exec-46] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:16:23.140 INFO [http-nio-8080-exec-56] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:16:23.161 INFO [http-nio-8080-exec-56] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:16:32.072 INFO [http-nio-8080-exec-56] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:16:32.102 INFO [http-nio-8080-exec-56] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:16:38.067 INFO [http-nio-8080-exec-60] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:16:38.112 INFO [http-nio-8080-exec-60] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:17:06.536 INFO [http-nio-8080-exec-55] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:17:06.557 INFO [http-nio-8080-exec-55] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:17:07.985 INFO [http-nio-8080-exec-60] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:17:08.002 INFO [http-nio-8080-exec-60] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:17:16.643 INFO [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:17:16.690 INFO [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:17:28.087 INFO [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:17:28.109 INFO [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:17:41.411 INFO [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:17:41.433 INFO [http-nio-8080-exec-68] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:18:41.717 INFO [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:18:41.752 INFO [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:19:01.536 INFO [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:19:01.555 INFO [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:19:17.456 INFO [http-nio-8080-exec-77] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:19:17.491 INFO [http-nio-8080-exec-77] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:21:07.011 INFO [http-nio-8080-exec-90] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:21:07.050 INFO [http-nio-8080-exec-90] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:21:30.818 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:21:30.841 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:24:57.332 INFO [http-nio-8080-exec-101] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:24:57.383 INFO [http-nio-8080-exec-101] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:26:16.307 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:26:16.343 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:26:29.149 INFO [http-nio-8080-exec-107] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:26:29.170 INFO [http-nio-8080-exec-107] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:27:28.280 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:27:28.316 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:27:31.154 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:27:31.174 INFO [http-nio-8080-exec-81] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:28:44.737 INFO [http-nio-8080-exec-116] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:28:44.783 INFO [http-nio-8080-exec-116] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:28:45.997 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:28:46.028 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:28:52.001 INFO [http-nio-8080-exec-117] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:28:52.025 INFO [http-nio-8080-exec-117] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:28:53.665 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:28:53.684 INFO [http-nio-8080-exec-98] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:30:01.729 INFO [http-nio-8080-exec-117] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:30:01.767 INFO [http-nio-8080-exec-117] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:30:09.824 INFO [http-nio-8080-exec-130] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:30:09.844 INFO [http-nio-8080-exec-130] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:30:32.822 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.reload Reloading context [/WebApplication!AM]
+24-Mar-2020 15:30:32.822 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:30:32.843 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:31:16.539 INFO [http-nio-8080-exec-112] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication!AM]
+24-Mar-2020 15:31:16.548 INFO [http-nio-8080-exec-138] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml
+24-Mar-2020 15:31:16.552 WARNING [http-nio-8080-exec-138] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:31:16.584 INFO [http-nio-8080-exec-138] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml has finished in 36 ms
+24-Mar-2020 15:34:10.074 INFO [http-nio-8080-exec-134] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] has started
+24-Mar-2020 15:34:10.122 INFO [http-nio-8080-exec-134] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication!AM] is completed
+24-Mar-2020 15:34:12.052 INFO [http-nio-8080-exec-117] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication!AM]
+24-Mar-2020 15:34:12.063 INFO [http-nio-8080-exec-142] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication1AM.xml
+24-Mar-2020 15:34:12.067 WARNING [http-nio-8080-exec-142] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:34:12.099 INFO [http-nio-8080-exec-142] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication1AM.xml has finished in 36 ms
+24-Mar-2020 15:34:12.102 INFO [http-nio-8080-exec-112] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication1AM]] after start() had already been called. The second call will be ignored.
+24-Mar-2020 15:34:29.210 INFO [http-nio-8080-exec-112] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:34:29.235 INFO [http-nio-8080-exec-112] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:34:30.492 INFO [http-nio-8080-exec-147] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:34:30.511 INFO [http-nio-8080-exec-147] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:34:43.433 INFO [http-nio-8080-exec-147] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:34:43.468 INFO [http-nio-8080-exec-147] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:35:17.260 INFO [http-nio-8080-exec-142] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:35:17.295 INFO [http-nio-8080-exec-142] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:35:47.704 INFO [http-nio-8080-exec-154] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:35:47.748 INFO [http-nio-8080-exec-154] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:35:50.165 INFO [http-nio-8080-exec-161] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:35:50.184 INFO [http-nio-8080-exec-161] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:36:14.969 INFO [http-nio-8080-exec-164] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:36:14.991 INFO [http-nio-8080-exec-164] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:37:49.388 INFO [http-nio-8080-exec-172] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication1AM]
+24-Mar-2020 15:37:49.398 INFO [http-nio-8080-exec-177] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication1AM.xml
+24-Mar-2020 15:37:49.403 WARNING [http-nio-8080-exec-177] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:37:49.439 INFO [http-nio-8080-exec-177] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication1AM.xml has finished in 41 ms
+24-Mar-2020 15:37:53.820 INFO [http-nio-8080-exec-176] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication1AM]
+24-Mar-2020 15:37:53.834 INFO [http-nio-8080-exec-177] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml
+24-Mar-2020 15:37:53.837 WARNING [http-nio-8080-exec-177] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:37:53.879 INFO [http-nio-8080-exec-177] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml has finished in 44 ms
+24-Mar-2020 15:37:53.883 INFO [http-nio-8080-exec-175] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication!AM]] after start() had already been called. The second call will be ignored.
+24-Mar-2020 15:37:58.439 INFO [http-nio-8080-exec-180] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication!AM]
+24-Mar-2020 15:37:58.450 INFO [http-nio-8080-exec-181] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml
+24-Mar-2020 15:37:58.454 WARNING [http-nio-8080-exec-181] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:37:58.497 INFO [http-nio-8080-exec-181] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication!AM.xml has finished in 47 ms
+24-Mar-2020 15:38:14.177 INFO [http-nio-8080-exec-175] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplication!AM]
+24-Mar-2020 15:38:14.191 INFO [http-nio-8080-exec-180] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication1AM.xml
+24-Mar-2020 15:38:14.195 WARNING [http-nio-8080-exec-180] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:38:14.234 INFO [http-nio-8080-exec-180] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication1AM.xml has finished in 43 ms
+24-Mar-2020 15:38:14.237 INFO [http-nio-8080-exec-183] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication1AM]] after start() had already been called. The second call will be ignored.
+24-Mar-2020 15:39:08.886 INFO [http-nio-8080-exec-178] org.apache.catalina.core.StandardContext.reload Reloading Context with name [] has started
+24-Mar-2020 15:39:08.933 INFO [http-nio-8080-exec-178] org.apache.catalina.core.StandardContext.reload Reloading Context with name [] is completed
+24-Mar-2020 15:39:15.602 INFO [http-nio-8080-exec-183] org.apache.catalina.core.StandardContext.reload Reloading Context with name [] has started
+24-Mar-2020 15:39:15.623 INFO [http-nio-8080-exec-183] org.apache.catalina.core.StandardContext.reload Reloading Context with name [] is completed
+24-Mar-2020 15:39:40.804 INFO [http-nio-8080-exec-183] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:39:40.851 INFO [http-nio-8080-exec-183] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:39:42.564 INFO [http-nio-8080-exec-187] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:39:42.584 INFO [http-nio-8080-exec-187] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:40:33.365 INFO [http-nio-8080-exec-198] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:40:33.400 INFO [http-nio-8080-exec-198] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:41:12.958 INFO [http-nio-8080-exec-207] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:41:13.007 INFO [http-nio-8080-exec-207] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:41:17.085 INFO [http-nio-8080-exec-188] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:41:17.104 INFO [http-nio-8080-exec-188] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:41:32.506 INFO [http-nio-8080-exec-208] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:41:32.528 INFO [http-nio-8080-exec-208] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:41:35.877 INFO [http-nio-8080-exec-211] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:41:35.899 INFO [http-nio-8080-exec-211] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:41:46.177 INFO [http-nio-8080-exec-212] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:41:46.223 INFO [http-nio-8080-exec-212] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:41:52.368 INFO [http-nio-8080-exec-212] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:41:52.387 INFO [http-nio-8080-exec-212] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:42:52.432 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+24-Mar-2020 15:42:52.433 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+24-Mar-2020 15:42:52.625 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+24-Mar-2020 15:42:52.844 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+24-Mar-2020 15:42:52.861 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+24-Mar-2020 15:42:52.864 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+24-Mar-2020 15:42:52.864 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+24-Mar-2020 15:42:52.866 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+24-Mar-2020 15:45:39.543 WARNING [main] org.apache.catalina.core.AprLifecycleListener.init The APR based Apache Tomcat Native library failed to load. The error reported was [E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform]
+ java.lang.UnsatisfiedLinkError: E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1941)
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1857)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at org.apache.tomcat.jni.Library.<init>(Library.java:42)
+	at org.apache.tomcat.jni.Library.initialize(Library.java:178)
+	at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:198)
+	at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+	at org.apache.catalina.connector.Connector.setProtocol(Connector.java:565)
+	at org.apache.catalina.connector.Connector.<init>(Connector.java:70)
+	at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:64)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:182)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1344)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2787)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1458)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:578)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:311)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:494)
+
+24-Mar-2020 15:45:39.713 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.9
+24-Mar-2020 15:45:39.714 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 5 2016 20:18:12 UTC
+24-Mar-2020 15:45:39.714 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.9.0
+24-Mar-2020 15:45:39.714 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+24-Mar-2020 15:45:39.714 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+24-Mar-2020 15:45:39.714 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+24-Mar-2020 15:45:39.715 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_91\jre
+24-Mar-2020 15:45:39.715 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_91-b14
+24-Mar-2020 15:45:39.715 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+24-Mar-2020 15:45:39.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9
+24-Mar-2020 15:45:39.720 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9
+24-Mar-2020 15:45:39.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\logging.properties
+24-Mar-2020 15:45:39.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+24-Mar-2020 15:45:39.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+24-Mar-2020 15:45:39.721 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+24-Mar-2020 15:45:39.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9
+24-Mar-2020 15:45:39.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9
+24-Mar-2020 15:45:39.722 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\temp
+24-Mar-2020 15:45:39.972 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+24-Mar-2020 15:45:40.119 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+24-Mar-2020 15:45:40.124 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+24-Mar-2020 15:45:40.129 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+24-Mar-2020 15:45:40.130 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 974 ms
+24-Mar-2020 15:45:40.178 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+24-Mar-2020 15:45:40.179 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.9
+24-Mar-2020 15:45:40.195 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\ROOT.xml
+24-Mar-2020 15:45:40.218 WARNING [localhost-startStop-1] org.apache.catalina.core.StandardContext.setPath A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+24-Mar-2020 15:45:40.819 INFO [localhost-startStop-1] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [205] milliseconds.
+24-Mar-2020 15:45:40.836 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\ROOT.xml has finished in 642 ms
+24-Mar-2020 15:45:40.836 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication1AM.xml
+24-Mar-2020 15:45:40.840 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:45:40.898 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplication1AM.xml has finished in 62 ms
+24-Mar-2020 15:45:40.898 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServletAnnotation.xml
+24-Mar-2020 15:45:40.903 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+24-Mar-2020 15:45:41.221 INFO [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowa Ignoring unknown property: value of "DB Connection" for "description" property
+24-Mar-2020 15:45:41.239 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+24-Mar-2020 15:45:41.241 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\conf\Catalina\localhost\WebApplicationServletAnnotation.xml has finished in 343 ms
+24-Mar-2020 15:45:41.242 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\docs
+24-Mar-2020 15:45:41.266 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\docs has finished in 24 ms
+24-Mar-2020 15:45:41.266 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\examples
+24-Mar-2020 15:45:41.675 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\examples has finished in 408 ms
+24-Mar-2020 15:45:41.675 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\host-manager
+24-Mar-2020 15:45:41.709 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\host-manager has finished in 34 ms
+24-Mar-2020 15:45:41.709 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\manager
+24-Mar-2020 15:45:41.742 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory E:\TSS\apache-tomcat-8.5.9-windows-x86\apache-tomcat-8.5.9\webapps\manager has finished in 32 ms
+24-Mar-2020 15:45:41.745 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+24-Mar-2020 15:45:41.755 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+24-Mar-2020 15:45:41.761 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1630 ms
+24-Mar-2020 15:45:42.404 INFO [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] has started
+24-Mar-2020 15:45:42.461 INFO [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication1AM] is completed
+24-Mar-2020 15:47:33.040 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+24-Mar-2020 15:47:33.041 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+24-Mar-2020 15:47:33.298 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+24-Mar-2020 15:47:33.574 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+24-Mar-2020 15:47:33.601 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+24-Mar-2020 15:47:33.605 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+24-Mar-2020 15:47:33.607 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+24-Mar-2020 15:47:33.608 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
