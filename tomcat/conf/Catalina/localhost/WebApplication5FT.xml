@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" docBase="C:\Users\fabix\Desktop\TSS\tss\WebApplication5FT\build\web" path="/WebApplication5FT">
+  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/bazaTestowaMSSQL" password="tomcat" type="javax.sql.DataSource" url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcat" username="tomcatuser"/>
+  <tomcat-users>
+    <user password="tomcat" roles="manager-gui,admin, manager-script" username="tomcat"/>
+    <user password="tomcat" roles="manager-gui,admin, manager-script" username="tomcatuser"/>
+    <user password="dkfPiGzO" roles="manager-gui,admin, manager-script" username="ide"/>
+    <user password="tomcatDB" roles="manager-gui,admin, manager-script" username="tomcatDB"/>
+  </tomcat-users>
+  <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc/authority" roleNameCol="role_name" userCredCol="user_pass" userNameCol="user_name" userRoleTable="user_roles" userTable="users"/>
+</Context>

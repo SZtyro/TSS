@@ -38,11 +38,16 @@
     <!-- Editable user database that can also be used by
          UserDatabaseRealm to authenticate users
     -->
-    <Resource name="UserDatabase" auth="Container"
+    <!--<Resource name="UserDatabase" auth="Container"
               type="org.apache.catalina.UserDatabase"
               description="User database that can be updated and saved"
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
-              pathname="conf/tomcat-users.xml" />
+              pathname="conf/tomcat-users.xml" />-->
+  <Resource name="jdbc/authority" auth="Container" type="javax.sql.DataSource" 
+            maxActive="100"
+            maxIdle="30" maxWait="10000" username="tomcatuser" password="tomcat"
+            driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+            url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth" />
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -85,15 +90,23 @@
          Either JSSE or OpenSSL style configuration may be used regardless of
          the SSLImplementation selected. JSSE style configuration is used below.
     -->
-    <!--
-    <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
-               maxThreads="150" SSLEnabled="true">
-        <SSLHostConfig>
-            <Certificate certificateKeystoreFile="conf/localhost-rsa.jks"
-                         type="RSA" />
-        </SSLHostConfig>
-    </Connector>
-    -->
+    
+      <Connector port="8443" 
+                 protocol="org.apache.coyote.http11.Http11NioProtocol"
+                 maxThreads="150" 
+                 SSLEnabled="true"
+                 scheme="https" secure="true"
+                  clientAuth="false"
+        sslProtocol="TLS"
+        keyAlias="tomcat"
+        keystoreFile="conf/klucz.jks"
+        keystorePass="123456">
+          <!--<SSLHostConfig>
+              <Certificate certificateKeystoreFile="conf/localhost-rsa.jks"
+                           type="RSA" />
+          </SSLHostConfig>-->
+      </Connector>
+    
     <!-- Define a SSL/TLS HTTP/1.1 Connector on port 8443 with HTTP/2
          This connector uses the APR/native implementation which always uses
          OpenSSL for TLS.
@@ -142,8 +155,22 @@
              resources under the key "UserDatabase".  Any edits
              that are performed against this UserDatabase are immediately
              available for use by the Realm.  -->
-        <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
-               resourceName="UserDatabase"/>
+        <!--<Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+               resourceName="UserDatabase"/>-->
+      
+      
+        <Realm className="org.apache.catalina.realm.DataSourceRealm" 
+               dataSourceName="jdbc/authority" 
+               userTable="users" 
+               userNameCol="user_name" userCredCol="user_pass" 
+               userRoleTable="user_roles" roleNameCol="role_name" />
+        
+      <Realm className="org.apache.catalina.realm.JDBCRealm" 
+             driverName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+             connectionURL="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth;user=tomcatuser;password=tomcat"             
+               userTable="users" 
+               userNameCol="user_name" userCredCol="user_pass" 
+               userRoleTable="user_roles" roleNameCol="role_name" />
       </Realm>
 
       <Host name="localhost"  appBase="webapps"
