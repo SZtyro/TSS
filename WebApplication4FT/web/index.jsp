@@ -1,10 +1,9 @@
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@page import="pl.data.DataLogic"%>
 <%@page import="pl.resources.Osoba"%>
 <%@page import="java.util.Map"%>
 <%@page import="java.util.ArrayList"%>
-<%@page contentType="text/html" pageEncoding="utf-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -19,10 +18,13 @@
         <p>Fabian Trubic</p>
 
         <h1>Aktualna data: </h1>
+
         <%
+
             java.util.Date date = new java.util.Date();
             out.println("<p>" + date + "</p>");
-            DataLogic logic = new DataLogic();
+            
+            DataLogic logic = new pl.data.DataLogic();
             java.sql.Connection connection = logic.connectDatabase();
             getServletContext().setAttribute("Connection", connection);
 
@@ -36,20 +38,21 @@
                 out.println("Dostepne kolumny: ");
                 out.println("</h5>");
                 out.println("<p>");
-                
+
                 for (int i = 0; i < wynikZapytania.getRow(); i++) {
 
-                    out.println(" " + wynikZapytania.getString("COLUMN_NAME") +"," );
+                    out.println(" " + wynikZapytania.getString("COLUMN_NAME") + ",");
 
                     wynikZapytania.next();
 
                 }
                 out.println("</p>");
-                
+
             } catch (Exception ex) {
                 String sKomunikat = ex.toString();
                 System.out.println(ex);
             }
+
         %>
 
 
@@ -62,15 +65,14 @@
                 <th>Akcje</th>
             </tr>
             <tbody>
-                <%
+                <%    
                     
-
                     try {
                         String sQuery = "SELECT * FROM t_uzytkownik";
                         java.sql.ResultSet wynikZapytania;
                         wynikZapytania = connection.createStatement(java.sql.ResultSet.TYPE_SCROLL_INSENSITIVE, java.sql.ResultSet.CONCUR_READ_ONLY).executeQuery(sQuery);
                         wynikZapytania.first();
-                        
+
                         for (int i = 0; i < wynikZapytania.getRow(); i++) {
                             out.println("<tr>");
                             out.println("<td>" + wynikZapytania.getString("id") + "</td>");
@@ -86,14 +88,13 @@
                             wynikZapytania.next();
 
                         }
-                        
+
                     } catch (Exception ex) {
                         String sKomunikat = ex.toString();
                         System.out.println(ex);
                     }
 
-                    
-
+                     
                 %>
 
             </tbody>

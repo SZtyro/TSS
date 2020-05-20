@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" docBase="C:\Users\fabix\Desktop\TSS\tss\WebApplication5FT\build\web" path="/WebApplication5FT">
+<Context antiJARLocking="true" docBase="C:\Users\fabix\Desktop\TSS\tss\WebApplicationFT\build\web" path="/WebApplicationFT">
   <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/bazaTestowaMSSQL" password="tomcat" type="javax.sql.DataSource" url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcat" username="tomcatuser"/>
   <tomcat-users>
     <user password="tomcat" roles="manager-gui,admin, manager-script" username="tomcat"/>

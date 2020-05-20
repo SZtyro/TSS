@@ -17,6 +17,9 @@ import java.sql.DriverManager;
  */
 public class DataLogic {
 
+       public DataLogic(){
+           System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+       }
     private static Connection newConnection(String url, String userName,String password)throws SQLException{
         
         String driverMySQL = "cpm.mysql.jdbc.Driver";
@@ -80,7 +83,7 @@ public class DataLogic {
     {
       throw new SQLException("Nie pobrano połączenia z kontekstu");
     }      
-  } 
+ } 
     
     
    

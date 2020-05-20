@@ -19,17 +19,17 @@
      define subcomponents such as "Valves" at this level.
      Documentation at /docs/config/server.html
  -->
-<Server port="8005" shutdown="SHUTDOWN">
-  <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+<Server port="8006" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener"/>
   <!-- Security listener. Documentation at /docs/config/listeners.html
   <Listener className="org.apache.catalina.security.SecurityListener" />
   -->
   <!--APR library loader. Documentation at /docs/apr.html -->
-  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener SSLEngine="on" className="org.apache.catalina.core.AprLifecycleListener"/>
   <!-- Prevent memory leaks due to use of particular java/javax APIs-->
-  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
-  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
-  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener"/>
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"/>
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener"/>
 
   <!-- Global JNDI resources
        Documentation at /docs/jndi-resources-howto.html
@@ -43,11 +43,7 @@
               description="User database that can be updated and saved"
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
               pathname="conf/tomcat-users.xml" />-->
-  <Resource name="jdbc/authority" auth="Container" type="javax.sql.DataSource" 
-            maxActive="100"
-            maxIdle="30" maxWait="10000" username="tomcatuser" password="tomcat"
-            driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-            url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth" />
+  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/authority" password="tomcat" type="javax.sql.DataSource" url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth" username="tomcatuser"/>
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -71,10 +67,7 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
-    <Connector port="8080" protocol="HTTP/1.1"
-			   server="Apache-Coyote/1.1"
-               connectionTimeout="20000"
-               redirectPort="8443" />
+    <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443" server="Apache-Coyote/1.1"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -91,16 +84,7 @@
          the SSLImplementation selected. JSSE style configuration is used below.
     -->
     
-      <Connector port="8443" 
-                 protocol="org.apache.coyote.http11.Http11NioProtocol"
-                 maxThreads="150" 
-                 SSLEnabled="true"
-                 scheme="https" secure="true"
-                  clientAuth="false"
-        sslProtocol="TLS"
-        keyAlias="tomcat"
-        keystoreFile="conf/klucz.jks"
-        keystorePass="123456">
+      <Connector SSLEnabled="true" clientAuth="false" keyAlias="tomcat" keystoreFile="conf/klucz.jks" keystorePass="123456" maxThreads="150" port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol" scheme="https" secure="true" sslProtocol="TLS">
           <!--<SSLHostConfig>
               <Certificate certificateKeystoreFile="conf/localhost-rsa.jks"
                            type="RSA" />
@@ -127,7 +111,7 @@
     -->
 
     <!-- Define an AJP 1.3 Connector on port 8009 -->
-    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443" />
+    <Connector port="8009" protocol="AJP/1.3" redirectPort="8443"/>
 
 
     <!-- An Engine represents the entry point (within Catalina) that processes
@@ -139,7 +123,7 @@
     <!-- You should set jvmRoute to support load-balancing via AJP ie :
     <Engine name="Catalina" defaultHost="localhost" jvmRoute="jvm1">
     -->
-    <Engine name="Catalina" defaultHost="localhost">
+    <Engine defaultHost="localhost" name="Catalina">
 
       <!--For clustering, please take a look at documentation at:
           /docs/cluster-howto.html  (simple how to)
@@ -159,22 +143,12 @@
                resourceName="UserDatabase"/>-->
       
       
-        <Realm className="org.apache.catalina.realm.DataSourceRealm" 
-               dataSourceName="jdbc/authority" 
-               userTable="users" 
-               userNameCol="user_name" userCredCol="user_pass" 
-               userRoleTable="user_roles" roleNameCol="role_name" />
+        <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc/authority" roleNameCol="role_name" userCredCol="user_pass" userNameCol="user_name" userRoleTable="user_roles" userTable="users"/>
         
-      <Realm className="org.apache.catalina.realm.JDBCRealm" 
-             driverName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-             connectionURL="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth;user=tomcatuser;password=tomcat"             
-               userTable="users" 
-               userNameCol="user_name" userCredCol="user_pass" 
-               userRoleTable="user_roles" roleNameCol="role_name" />
+      <Realm className="org.apache.catalina.realm.JDBCRealm" connectionURL="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth;user=tomcatuser;password=tomcat" driverName="com.microsoft.sqlserver.jdbc.SQLServerDriver" roleNameCol="role_name" userCredCol="user_pass" userNameCol="user_name" userRoleTable="user_roles" userTable="users"/>
       </Realm>
 
-      <Host name="localhost"  appBase="webapps"
-            unpackWARs="true" autoDeploy="true">
+      <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true">
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
@@ -185,9 +159,7 @@
         <!-- Access log processes all example.
              Documentation at: /docs/config/valve.html
              Note: The pattern used is equivalent to using pattern="common" -->
-        <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs"
-               prefix="localhost_access_log" suffix=".txt"
-               pattern="%h %l %u %t &quot;%r&quot; %s %b" />
+        <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       </Host>
     </Engine>
