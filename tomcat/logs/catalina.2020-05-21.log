@@ -1,0 +1,797 @@
+21-May-2020 07:58:47.991 WARNING [main] org.apache.catalina.core.AprLifecycleListener.init The APR based Apache Tomcat Native library failed to load. The error reported was [C:\Users\fabix\Desktop\TSS\tss\tomcat\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform]
+ java.lang.UnsatisfiedLinkError: C:\Users\fabix\Desktop\TSS\tss\tomcat\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1934)
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1850)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at org.apache.tomcat.jni.Library.<init>(Library.java:42)
+	at org.apache.tomcat.jni.Library.initialize(Library.java:178)
+	at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:198)
+	at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+	at org.apache.catalina.connector.Connector.setProtocol(Connector.java:565)
+	at org.apache.catalina.connector.Connector.<init>(Connector.java:70)
+	at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:64)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:182)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1339)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1458)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:578)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:311)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:494)
+
+21-May-2020 07:58:48.050 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.9
+21-May-2020 07:58:48.051 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 5 2016 20:18:12 UTC
+21-May-2020 07:58:48.051 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.9.0
+21-May-2020 07:58:48.051 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+21-May-2020 07:58:48.051 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-May-2020 07:58:48.051 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-May-2020 07:58:48.051 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_231\jre
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_231-b11
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\fabix\Desktop\TSS\tss\tomcat
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\fabix\Desktop\TSS\tss\tomcat
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\logging.properties
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|DESKTOP-BQM3HN7
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\fabix\Desktop\TSS\tss\tomcat
+21-May-2020 07:58:48.080 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\fabix\Desktop\TSS\tss\tomcat
+21-May-2020 07:58:48.081 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\fabix\Desktop\TSS\tss\tomcat\temp
+21-May-2020 07:58:48.183 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-May-2020 07:58:48.579 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+21-May-2020 07:58:48.581 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["https-jsse-nio-8443"]
+21-May-2020 07:58:48.934 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+21-May-2020 07:58:48.935 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+21-May-2020 07:58:48.936 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+21-May-2020 07:58:48.936 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 1115 ms
+21-May-2020 07:58:48.941 WARNING [main] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = authority Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 07:58:48.941 WARNING [main] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = authority Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 07:58:48.949 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+21-May-2020 07:58:48.949 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.9
+21-May-2020 07:58:49.409 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\ROOT.xml
+21-May-2020 07:58:49.465 WARNING [localhost-startStop-1] org.apache.catalina.core.StandardContext.setPath A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+21-May-2020 07:58:49.502 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@27ad97ad]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [E:\Pobrane\Zadanie1_DudusPatryk_IO1\Zadanie1_DuduœPatryk_IO1\build\web] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+21-May-2020 07:58:49.502 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\ROOT.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 07:58:49.507 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\ROOT.xml has finished in 97 ms
+21-May-2020 07:58:49.507 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplication1AM.xml
+21-May-2020 07:58:49.515 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 07:58:49.523 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication1AM]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@37834238]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [E:\Pobrane\WebApplicationServlet\WebApplication1AM\build\web] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+21-May-2020 07:58:49.523 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplication1AM.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication1AM]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 07:58:49.527 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplication1AM.xml has finished in 20 ms
+21-May-2020 07:58:49.527 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml
+21-May-2020 07:58:49.531 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 07:58:49.532 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 07:58:49.579 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 07:58:49.580 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 07:58:49.580 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 07:58:49.581 WARNING [localhost-startStop-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users'.
+21-May-2020 07:58:49.961 WARNING [localhost-startStop-1] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 07:58:49.967 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 07:58:49.967 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 07:58:50.055 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 07:58:50.104 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 577 ms
+21-May-2020 07:58:50.104 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationServlet.xml
+21-May-2020 07:58:50.107 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 07:58:50.278 INFO [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowa Ignoring unknown property: value of "DB Connection" for "description" property
+21-May-2020 07:58:50.316 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 07:58:50.319 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationServlet.xml has finished in 215 ms
+21-May-2020 07:58:50.320 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationServletAnnotation.xml
+21-May-2020 07:58:50.323 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 07:58:50.493 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 07:58:50.493 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 07:58:50.516 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 07:58:50.519 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationServletAnnotation.xml has finished in 199 ms
+21-May-2020 07:58:50.520 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\docs
+21-May-2020 07:58:50.661 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 07:58:50.664 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\docs has finished in 144 ms
+21-May-2020 07:58:50.664 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\examples
+21-May-2020 07:58:50.977 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 07:58:51.001 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\examples has finished in 337 ms
+21-May-2020 07:58:51.001 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\host-manager
+21-May-2020 07:58:51.150 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 07:58:51.153 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\host-manager has finished in 152 ms
+21-May-2020 07:58:51.153 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\manager
+21-May-2020 07:58:51.319 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 07:58:51.321 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\manager has finished in 168 ms
+21-May-2020 07:58:51.322 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+21-May-2020 07:58:51.326 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [https-jsse-nio-8443]
+21-May-2020 07:58:51.328 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+21-May-2020 07:58:51.329 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 2393 ms
+21-May-2020 07:58:53.029 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationFT]
+21-May-2020 07:58:53.144 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml
+21-May-2020 07:58:53.147 WARNING [http-nio-8080-exec-10] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 07:58:53.148 WARNING [http-nio-8080-exec-10] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 07:58:53.148 WARNING [http-nio-8080-exec-10] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 07:58:53.148 WARNING [http-nio-8080-exec-10] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 07:58:53.148 WARNING [http-nio-8080-exec-10] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 07:58:53.148 WARNING [http-nio-8080-exec-10] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users'.
+21-May-2020 07:58:53.357 WARNING [http-nio-8080-exec-10] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 07:58:53.357 WARNING [http-nio-8080-exec-10] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 07:58:53.357 WARNING [http-nio-8080-exec-10] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 07:58:53.405 INFO [http-nio-8080-exec-10] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 261 ms
+21-May-2020 08:04:27.499 WARNING [http-nio-8080-exec-12] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 08:04:27.500 SEVERE [http-nio-8080-exec-12] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4cca8ed7]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [16ca1954-679f-4be5-bd6d-c2940e70ef8f-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:04:28.002 INFO [http-nio-8080-exec-12] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationFT]
+21-May-2020 08:04:32.277 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml
+21-May-2020 08:04:32.291 WARNING [http-nio-8080-exec-15] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:04:32.292 WARNING [http-nio-8080-exec-15] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:04:32.293 WARNING [http-nio-8080-exec-15] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:04:32.293 WARNING [http-nio-8080-exec-15] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:04:32.294 WARNING [http-nio-8080-exec-15] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:04:32.295 WARNING [http-nio-8080-exec-15] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users'.
+21-May-2020 08:04:32.477 WARNING [http-nio-8080-exec-15] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 08:04:32.477 WARNING [http-nio-8080-exec-15] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:04:32.478 WARNING [http-nio-8080-exec-15] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:04:32.511 INFO [http-nio-8080-exec-15] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 234 ms
+21-May-2020 08:04:32.605 INFO [http-nio-8080-exec-11] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationFT]] after start() had already been called. The second call will be ignored.
+21-May-2020 08:10:15.063 WARNING [http-nio-8080-exec-21] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 08:10:15.064 SEVERE [http-nio-8080-exec-21] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@23b11b0a]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [0f7540fa-7131-47b5-a2fd-2ff41b2cb559-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:10:15.565 INFO [http-nio-8080-exec-21] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationFT]
+21-May-2020 08:10:19.512 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+21-May-2020 08:10:19.512 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-May-2020 08:10:19.776 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["https-jsse-nio-8443"]
+21-May-2020 08:10:20.033 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+21-May-2020 08:10:20.295 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+21-May-2020 08:10:20.320 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-May-2020 08:10:20.323 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["https-jsse-nio-8443"]
+21-May-2020 08:10:20.323 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+21-May-2020 08:10:20.324 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-May-2020 08:10:20.325 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["https-jsse-nio-8443"]
+21-May-2020 08:10:20.326 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
+21-May-2020 08:10:23.991 WARNING [main] org.apache.catalina.core.AprLifecycleListener.init The APR based Apache Tomcat Native library failed to load. The error reported was [C:\Users\fabix\Desktop\TSS\tss\tomcat\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform]
+ java.lang.UnsatisfiedLinkError: C:\Users\fabix\Desktop\TSS\tss\tomcat\bin\tcnative-1.dll: Can't load IA 32-bit .dll on a AMD 64-bit platform
+	at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+	at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1934)
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1850)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:870)
+	at java.lang.System.loadLibrary(System.java:1122)
+	at org.apache.tomcat.jni.Library.<init>(Library.java:42)
+	at org.apache.tomcat.jni.Library.initialize(Library.java:178)
+	at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:198)
+	at org.apache.catalina.core.AprLifecycleListener.isAprAvailable(AprLifecycleListener.java:107)
+	at org.apache.catalina.connector.Connector.setProtocol(Connector.java:565)
+	at org.apache.catalina.connector.Connector.<init>(Connector.java:70)
+	at org.apache.catalina.startup.ConnectorCreateRule.begin(ConnectorCreateRule.java:64)
+	at org.apache.tomcat.util.digester.Digester.startElement(Digester.java:1190)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.startElement(AbstractSAXParser.java:509)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractXMLDocumentParser.emptyElement(AbstractXMLDocumentParser.java:182)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1339)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2784)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1458)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:578)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:629)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:311)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:494)
+
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.9
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Dec 5 2016 20:18:12 UTC
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.9.0
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_231\jre
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_231-b11
+21-May-2020 08:10:24.055 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-May-2020 08:10:24.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\fabix\Desktop\TSS\tss\tomcat
+21-May-2020 08:10:24.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\fabix\Desktop\TSS\tss\tomcat
+21-May-2020 08:10:24.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\logging.properties
+21-May-2020 08:10:24.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-May-2020 08:10:24.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|DESKTOP-BQM3HN7
+21-May-2020 08:10:24.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+21-May-2020 08:10:24.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-May-2020 08:10:24.056 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\fabix\Desktop\TSS\tss\tomcat
+21-May-2020 08:10:24.057 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\fabix\Desktop\TSS\tss\tomcat
+21-May-2020 08:10:24.057 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\fabix\Desktop\TSS\tss\tomcat\temp
+21-May-2020 08:10:24.141 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-May-2020 08:10:24.411 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+21-May-2020 08:10:24.413 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["https-jsse-nio-8443"]
+21-May-2020 08:10:24.754 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+21-May-2020 08:10:24.754 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+21-May-2020 08:10:24.756 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+21-May-2020 08:10:24.756 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 946 ms
+21-May-2020 08:10:24.762 WARNING [main] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = authority Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:10:24.762 WARNING [main] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = authority Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:10:24.771 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+21-May-2020 08:10:24.771 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.9
+21-May-2020 08:10:25.048 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\ROOT.xml
+21-May-2020 08:10:25.061 WARNING [localhost-startStop-1] org.apache.catalina.core.StandardContext.setPath A context path must either be an empty string or start with a '/' and do not end with a '/'. The path [/] does not meet these criteria and has been changed to []
+21-May-2020 08:10:25.104 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@27ad97ad]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [E:\Pobrane\Zadanie1_DudusPatryk_IO1\Zadanie1_DuduœPatryk_IO1\build\web] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+21-May-2020 08:10:25.105 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\ROOT.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 08:10:25.110 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\ROOT.xml has finished in 61 ms
+21-May-2020 08:10:25.110 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplication1AM.xml
+21-May-2020 08:10:25.119 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:10:25.127 SEVERE [localhost-startStop-1] org.apache.catalina.core.ContainerBase.addChildInternal ContainerBase.addChild: start: 
+ org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication1AM]]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:752)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@37834238]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:167)
+	at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4842)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4974)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 10 more
+Caused by: java.lang.IllegalArgumentException: The main resource set specified [E:\Pobrane\WebApplicationServlet\WebApplication1AM\build\web] is not valid
+	at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:732)
+	at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:690)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	... 13 more
+
+21-May-2020 08:10:25.127 SEVERE [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplication1AM.xml
+ java.lang.IllegalStateException: ContainerBase.addChild: start: org.apache.catalina.LifecycleException: Failed to start component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication1AM]]
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:756)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:728)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:734)
+	at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:596)
+	at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1805)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 08:10:25.131 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplication1AM.xml has finished in 21 ms
+21-May-2020 08:10:25.131 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationServlet.xml
+21-May-2020 08:10:25.135 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:10:25.485 INFO [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowa Ignoring unknown property: value of "DB Connection" for "description" property
+21-May-2020 08:10:25.547 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:10:25.570 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationServlet.xml has finished in 439 ms
+21-May-2020 08:10:25.570 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationServletAnnotation.xml
+21-May-2020 08:10:25.572 WARNING [localhost-startStop-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:10:25.741 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:10:25.741 WARNING [localhost-startStop-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:10:25.776 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:10:25.780 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationServletAnnotation.xml has finished in 210 ms
+21-May-2020 08:10:25.780 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\docs
+21-May-2020 08:10:25.969 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:10:25.972 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\docs has finished in 192 ms
+21-May-2020 08:10:25.973 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\examples
+21-May-2020 08:10:26.260 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:10:26.293 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\examples has finished in 320 ms
+21-May-2020 08:10:26.293 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\host-manager
+21-May-2020 08:10:26.435 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:10:26.438 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\host-manager has finished in 145 ms
+21-May-2020 08:10:26.438 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\manager
+21-May-2020 08:10:26.582 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:10:26.585 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory C:\Users\fabix\Desktop\TSS\tss\tomcat\webapps\manager has finished in 147 ms
+21-May-2020 08:10:26.587 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [http-nio-8080]
+21-May-2020 08:10:26.593 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [https-jsse-nio-8443]
+21-May-2020 08:10:26.595 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler [ajp-nio-8009]
+21-May-2020 08:10:26.596 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 1839 ms
+21-May-2020 08:10:28.657 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml
+21-May-2020 08:10:28.674 WARNING [http-nio-8080-exec-8] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:10:28.676 WARNING [http-nio-8080-exec-8] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:10:28.677 WARNING [http-nio-8080-exec-8] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:10:28.678 WARNING [http-nio-8080-exec-8] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:10:28.678 WARNING [http-nio-8080-exec-8] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:10:28.679 WARNING [http-nio-8080-exec-8] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users'.
+21-May-2020 08:10:28.857 WARNING [http-nio-8080-exec-8] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 08:10:28.858 WARNING [http-nio-8080-exec-8] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:10:28.858 WARNING [http-nio-8080-exec-8] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:10:28.889 INFO [http-nio-8080-exec-8] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:10:28.899 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 242 ms
+21-May-2020 08:10:29.001 INFO [http-nio-8080-exec-9] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationFT]] after start() had already been called. The second call will be ignored.
+21-May-2020 08:15:42.354 WARNING [http-nio-8080-exec-7] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 08:15:42.358 SEVERE [http-nio-8080-exec-7] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@1da16fa1]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [3be91780-6bcf-4f5a-853f-48dd14882c19-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:15:42.359 SEVERE [http-nio-8080-exec-7] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@1da16fa1]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [743a91c5-c03d-4d70-824f-e042f0e58bfb-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:15:42.871 INFO [http-nio-8080-exec-7] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationFT]
+21-May-2020 08:15:49.617 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml
+21-May-2020 08:15:49.631 WARNING [http-nio-8080-exec-1] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:15:49.632 WARNING [http-nio-8080-exec-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:15:49.633 WARNING [http-nio-8080-exec-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:15:49.633 WARNING [http-nio-8080-exec-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:15:49.634 WARNING [http-nio-8080-exec-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:15:49.634 WARNING [http-nio-8080-exec-1] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users'.
+21-May-2020 08:15:49.818 WARNING [http-nio-8080-exec-1] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 08:15:49.819 WARNING [http-nio-8080-exec-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:15:49.819 WARNING [http-nio-8080-exec-1] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:15:49.840 INFO [http-nio-8080-exec-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:15:49.848 INFO [http-nio-8080-exec-1] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 231 ms
+21-May-2020 08:15:49.958 INFO [http-nio-8080-exec-11] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationFT]] after start() had already been called. The second call will be ignored.
+21-May-2020 08:19:08.529 WARNING [http-nio-8080-exec-16] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 08:19:08.529 SEVERE [http-nio-8080-exec-16] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@7812eab8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [2731e103-094d-4026-aed9-5f1bfa9c9fe7-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:19:08.530 SEVERE [http-nio-8080-exec-16] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@7812eab8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [32823caa-6289-4c95-8020-fb2745f070dc-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:19:08.530 SEVERE [http-nio-8080-exec-16] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@7812eab8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [15a04629-874c-4f8e-83e5-dfb9caa8c468-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:19:09.035 INFO [http-nio-8080-exec-16] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationFT]
+21-May-2020 08:19:10.185 INFO [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml
+21-May-2020 08:19:10.189 WARNING [http-nio-8080-exec-11] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:19:10.189 WARNING [http-nio-8080-exec-11] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:19:10.189 WARNING [http-nio-8080-exec-11] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:19:10.190 WARNING [http-nio-8080-exec-11] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:19:10.190 WARNING [http-nio-8080-exec-11] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:19:10.190 WARNING [http-nio-8080-exec-11] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users'.
+21-May-2020 08:19:10.374 WARNING [http-nio-8080-exec-11] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 08:19:10.375 WARNING [http-nio-8080-exec-11] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:19:10.375 WARNING [http-nio-8080-exec-11] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:19:10.396 INFO [http-nio-8080-exec-11] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:19:10.407 INFO [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 222 ms
+21-May-2020 08:19:10.504 INFO [http-nio-8080-exec-19] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationFT]] after start() had already been called. The second call will be ignored.
+21-May-2020 08:19:39.679 WARNING [http-nio-8080-exec-26] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 08:19:39.679 SEVERE [http-nio-8080-exec-26] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@93521fa]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [5eafa90f-edb7-4da9-8e7a-374ec7881577-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:19:40.184 INFO [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationFT]
+21-May-2020 08:19:41.334 INFO [http-nio-8080-exec-21] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml
+21-May-2020 08:19:41.337 WARNING [http-nio-8080-exec-21] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:19:41.338 WARNING [http-nio-8080-exec-21] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:19:41.338 WARNING [http-nio-8080-exec-21] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:19:41.338 WARNING [http-nio-8080-exec-21] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:19:41.338 WARNING [http-nio-8080-exec-21] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:19:41.338 WARNING [http-nio-8080-exec-21] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users'.
+21-May-2020 08:19:41.476 WARNING [http-nio-8080-exec-21] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 08:19:41.476 WARNING [http-nio-8080-exec-21] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:19:41.476 WARNING [http-nio-8080-exec-21] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:19:41.499 INFO [http-nio-8080-exec-21] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:19:41.507 INFO [http-nio-8080-exec-21] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 173 ms
+21-May-2020 08:19:41.609 INFO [http-nio-8080-exec-26] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationFT]] after start() had already been called. The second call will be ignored.
+21-May-2020 08:34:24.130 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] has started
+21-May-2020 08:34:24.140 WARNING [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 08:34:24.141 SEVERE [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@5bbe5cd9]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [18132824-0690-40fc-90dc-0b37ebf5d14c-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:34:24.141 SEVERE [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@5bbe5cd9]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [65232741-6add-4dab-b89c-3116820d385e-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:34:24.141 SEVERE [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@5bbe5cd9]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [cd210e62-e87d-4d5b-bde8-9fbf2a2a6145-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:34:24.141 SEVERE [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@5bbe5cd9]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [e336a648-a856-4ab4-8412-c01732525e46-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:34:24.141 SEVERE [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@5bbe5cd9]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [f92a759b-cecc-4de9-83bb-7d79b5e4fef0-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:34:24.141 SEVERE [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@5bbe5cd9]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [1823cea0-3ba9-4cec-9896-31b507bcc013-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:34:24.142 SEVERE [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@5bbe5cd9]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [ec0a919c-087a-4ccc-a679-b06e6ebc8eb8-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:34:24.279 SEVERE [http-nio-8080-exec-37] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@5bbe5cd9]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [9a72a50f-a6c8-4641-a7e5-acc332f599b4-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:34:24.467 WARNING [http-nio-8080-exec-37] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 08:34:24.468 WARNING [http-nio-8080-exec-37] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:34:24.468 WARNING [http-nio-8080-exec-37] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:34:24.506 INFO [http-nio-8080-exec-37] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:34:24.520 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] is completed
+21-May-2020 08:47:32.810 WARNING [http-nio-8080-exec-45] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 08:47:32.811 SEVERE [http-nio-8080-exec-45] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@71da9be8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [fe59d95d-d8c8-4772-a645-e23951fe7ed9-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:47:32.812 SEVERE [http-nio-8080-exec-45] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@71da9be8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [060d59e3-b586-4a45-84a3-b9ab60c76aa8-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:47:32.813 SEVERE [http-nio-8080-exec-45] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@71da9be8]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [5fe65c01-3da0-4bd1-907c-c49997888ef6-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 08:47:33.318 INFO [http-nio-8080-exec-45] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/WebApplicationFT]
+21-May-2020 08:52:30.099 INFO [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml
+21-May-2020 08:52:30.103 WARNING [http-nio-8080-exec-56] org.apache.catalina.startup.SetContextPropertiesRule.begin [SetContextPropertiesRule]{Context} Setting property 'antiJARLocking' to 'true' did not find a matching property.
+21-May-2020 08:52:30.103 WARNING [http-nio-8080-exec-56] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:52:30.103 WARNING [http-nio-8080-exec-56] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:52:30.103 WARNING [http-nio-8080-exec-56] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:52:30.103 WARNING [http-nio-8080-exec-56] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users/user'.
+21-May-2020 08:52:30.103 WARNING [http-nio-8080-exec-56] org.apache.tomcat.util.digester.Digester.endElement   No rules found matching 'Context/tomcat-users'.
+21-May-2020 08:52:30.242 WARNING [http-nio-8080-exec-56] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 08:52:30.242 WARNING [http-nio-8080-exec-56] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 08:52:30.242 WARNING [http-nio-8080-exec-56] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 08:52:30.261 INFO [http-nio-8080-exec-56] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 08:52:30.268 INFO [http-nio-8080-exec-56] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 169 ms
+21-May-2020 08:52:30.365 INFO [http-nio-8080-exec-55] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationFT]] after start() had already been called. The second call will be ignored.
+21-May-2020 09:12:42.087 INFO [http-nio-8080-exec-55] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] has started
+21-May-2020 09:12:42.094 WARNING [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 09:12:42.094 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [a3d8a3d4-78da-494e-96ad-9484c1226866-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.094 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [0f762756-b379-4912-bbf6-34e3b5caa472-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.094 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [3149d593-b977-4b9a-9b64-5ffa5da6a1c8-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.094 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [34c286cf-b753-4239-a13c-d6986234dd2a-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.094 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [1f3bf730-9626-4021-b5b7-34f1ebe90a39-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.095 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [08bfe56f-953e-458a-9547-ac9e9ecda7f6-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.095 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [188e7fff-abe0-408f-8259-fc38bb5c10f8-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.384 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [72950d17-e906-4e7d-8e60-10120be94854-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.384 SEVERE [http-nio-8080-exec-55] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@4a7cd52e]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [5048b2e4-54fc-40d6-9760-d17da87d1238-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:12:42.407 SEVERE [http-nio-8080-exec-55] org.apache.catalina.startup.ContextConfig.processAnnotationsJar Unable to process Jar entry [module-info.class] from Jar [file:/C:/Users/fabix/Desktop/TSS/tss/WebApplicationFT/build/web/WEB-INF/lib/gson-2.8.6.jar] for annotations
+ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in constant pool: 19
+	at org.apache.tomcat.util.bcel.classfile.Constant.readConstant(Constant.java:97)
+	at org.apache.tomcat.util.bcel.classfile.ConstantPool.<init>(ConstantPool.java:54)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:174)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.parse(ClassParser.java:83)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2053)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:2000)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1970)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1923)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1163)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:775)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5087)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3782)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:789)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 09:12:42.615 WARNING [http-nio-8080-exec-55] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 09:12:42.616 WARNING [http-nio-8080-exec-55] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 09:12:42.616 WARNING [http-nio-8080-exec-55] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 09:12:42.660 INFO [http-nio-8080-exec-55] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 09:12:42.674 INFO [http-nio-8080-exec-55] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] is completed
+21-May-2020 09:12:42.875 INFO [http-nio-8080-exec-53] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] has started
+21-May-2020 09:12:42.976 SEVERE [http-nio-8080-exec-53] org.apache.catalina.startup.ContextConfig.processAnnotationsJar Unable to process Jar entry [module-info.class] from Jar [file:/C:/Users/fabix/Desktop/TSS/tss/WebApplicationFT/build/web/WEB-INF/lib/gson-2.8.6.jar] for annotations
+ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in constant pool: 19
+	at org.apache.tomcat.util.bcel.classfile.Constant.readConstant(Constant.java:97)
+	at org.apache.tomcat.util.bcel.classfile.ConstantPool.<init>(ConstantPool.java:54)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:174)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.parse(ClassParser.java:83)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2053)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:2000)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1970)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1923)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1163)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:775)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5087)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3782)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:789)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 09:12:43.088 WARNING [http-nio-8080-exec-53] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 09:12:43.088 WARNING [http-nio-8080-exec-53] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 09:12:43.088 WARNING [http-nio-8080-exec-53] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 09:12:43.113 INFO [http-nio-8080-exec-53] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 09:12:43.122 INFO [http-nio-8080-exec-53] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] is completed
+21-May-2020 09:15:43.967 INFO [http-nio-8080-exec-64] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] has started
+21-May-2020 09:15:43.988 WARNING [http-nio-8080-exec-64] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 09:15:43.989 SEVERE [http-nio-8080-exec-64] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@640e2a13]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [21c79927-9428-4318-804b-2f323c1d2ca2-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:15:44.164 SEVERE [http-nio-8080-exec-64] org.apache.catalina.startup.ContextConfig.processAnnotationsJar Unable to process Jar entry [module-info.class] from Jar [file:/C:/Users/fabix/Desktop/TSS/tss/WebApplicationFT/build/web/WEB-INF/lib/gson-2.8.6.jar] for annotations
+ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in constant pool: 19
+	at org.apache.tomcat.util.bcel.classfile.Constant.readConstant(Constant.java:97)
+	at org.apache.tomcat.util.bcel.classfile.ConstantPool.<init>(ConstantPool.java:54)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:174)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.parse(ClassParser.java:83)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2053)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:2000)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1970)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1923)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1163)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:775)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5087)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3782)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:789)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 09:15:44.215 WARNING [http-nio-8080-exec-64] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 09:15:44.215 WARNING [http-nio-8080-exec-64] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 09:15:44.215 WARNING [http-nio-8080-exec-64] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 09:15:44.231 INFO [http-nio-8080-exec-64] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 09:15:44.239 INFO [http-nio-8080-exec-64] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] is completed
+21-May-2020 09:16:20.354 INFO [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] has started
+21-May-2020 09:16:20.357 WARNING [http-nio-8080-exec-66] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 09:16:20.357 SEVERE [http-nio-8080-exec-66] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@77987ba5]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [a6aea80f-f556-4106-991b-8da994418ebd-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:16:20.415 SEVERE [http-nio-8080-exec-66] org.apache.catalina.startup.ContextConfig.processAnnotationsJar Unable to process Jar entry [module-info.class] from Jar [file:/C:/Users/fabix/Desktop/TSS/tss/WebApplicationFT/build/web/WEB-INF/lib/gson-2.8.6.jar] for annotations
+ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in constant pool: 19
+	at org.apache.tomcat.util.bcel.classfile.Constant.readConstant(Constant.java:97)
+	at org.apache.tomcat.util.bcel.classfile.ConstantPool.<init>(ConstantPool.java:54)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:174)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.parse(ClassParser.java:83)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2053)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:2000)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1970)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1923)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1163)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:775)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5087)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3782)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:789)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 09:16:20.605 WARNING [http-nio-8080-exec-66] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 09:16:20.605 WARNING [http-nio-8080-exec-66] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 09:16:20.605 WARNING [http-nio-8080-exec-66] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 09:16:20.621 INFO [http-nio-8080-exec-66] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 09:16:20.630 INFO [http-nio-8080-exec-66] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] is completed
+21-May-2020 09:31:45.812 INFO [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] has started
+21-May-2020 09:31:45.818 WARNING [http-nio-8080-exec-76] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-May-2020 09:31:45.819 SEVERE [http-nio-8080-exec-76] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@49ccbd69]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [d032b342-ebd1-46af-8310-370fd29f9ea8-8]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:31:45.819 SEVERE [http-nio-8080-exec-76] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@49ccbd69]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [6d397be2-4d39-438b-bf1a-5261970f6c17-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:31:45.819 SEVERE [http-nio-8080-exec-76] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@49ccbd69]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [77f1eebc-9f67-416c-9a7b-fe7d368c1200-4]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:31:45.819 SEVERE [http-nio-8080-exec-76] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@49ccbd69]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [9eceef70-1027-4f4d-9cf8-895e566d3bb6-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:31:45.819 SEVERE [http-nio-8080-exec-76] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@49ccbd69]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [9e575e7f-8bca-4aa9-b67b-e4e1c421df62-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:31:45.819 SEVERE [http-nio-8080-exec-76] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@49ccbd69]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [a3d69919-52a6-4af1-9e0a-b2fbdbca2edf-8]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:31:45.820 SEVERE [http-nio-8080-exec-76] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@49ccbd69]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [2f4aa3b7-f67a-436f-a134-14e8462ecf32-2]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+21-May-2020 09:31:46.059 SEVERE [http-nio-8080-exec-76] org.apache.catalina.startup.ContextConfig.processAnnotationsJar Unable to process Jar entry [module-info.class] from Jar [file:/C:/Users/fabix/Desktop/TSS/tss/WebApplicationFT/build/web/WEB-INF/lib/gson-2.8.6.jar] for annotations
+ org.apache.tomcat.util.bcel.classfile.ClassFormatException: Invalid byte tag in constant pool: 19
+	at org.apache.tomcat.util.bcel.classfile.Constant.readConstant(Constant.java:97)
+	at org.apache.tomcat.util.bcel.classfile.ConstantPool.<init>(ConstantPool.java:54)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.readConstantPool(ClassParser.java:174)
+	at org.apache.tomcat.util.bcel.classfile.ClassParser.parse(ClassParser.java:83)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsStream(ContextConfig.java:2053)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsJar(ContextConfig.java:2000)
+	at org.apache.catalina.startup.ContextConfig.processAnnotationsUrl(ContextConfig.java:1970)
+	at org.apache.catalina.startup.ContextConfig.processAnnotations(ContextConfig.java:1923)
+	at org.apache.catalina.startup.ContextConfig.webConfig(ContextConfig.java:1163)
+	at org.apache.catalina.startup.ContextConfig.configureStart(ContextConfig.java:775)
+	at org.apache.catalina.startup.ContextConfig.lifecycleEvent(ContextConfig.java:299)
+	at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:94)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5087)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.StandardContext.reload(StandardContext.java:3782)
+	at org.apache.catalina.manager.ManagerServlet.reload(ManagerServlet.java:1006)
+	at org.apache.catalina.manager.ManagerServlet.doGet(ManagerServlet.java:346)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:622)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:230)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.filters.SetCharacterEncodingFilter.doFilter(SetCharacterEncodingFilter.java:108)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:192)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:165)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:591)
+	at org.apache.catalina.valves.RequestFilterValve.process(RequestFilterValve.java:319)
+	at org.apache.catalina.valves.RemoteAddrValve.invoke(RemoteAddrValve.java:88)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:624)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:349)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:783)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:789)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1437)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+
+21-May-2020 09:31:46.167 WARNING [http-nio-8080-exec-76] org.apache.catalina.startup.ContextConfig.validateSecurityRoles Security role name admin used in an <auth-constraint> without being defined in a <security-role>
+21-May-2020 09:31:46.167 WARNING [http-nio-8080-exec-76] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
+21-May-2020 09:31:46.167 WARNING [http-nio-8080-exec-76] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
+21-May-2020 09:31:46.186 INFO [http-nio-8080-exec-76] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-May-2020 09:31:46.195 INFO [http-nio-8080-exec-76] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplicationFT] is completed

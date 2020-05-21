@@ -14771,3 +14771,15 @@ Caused by: java.lang.IllegalArgumentException: The main resource set specified [
 20-May-2020 16:53:12.822 WARNING [localhost-startStop-23] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxActive is not used in DBCP2, use maxTotal instead. maxTotal default value is 8. You have set value of "100" for "maxActive" property, which is being ignored.
 20-May-2020 16:53:12.822 WARNING [localhost-startStop-23] org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory.getObjectInstance Name = bazaTestowaMSSQL Property maxWait is not used in DBCP2 , use maxWaitMillis instead. maxWaitMillis default value is -1. You have set value of "10000" for "maxWait" property, which is being ignored.
 20-May-2020 16:53:12.875 INFO [localhost-startStop-23] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 245 ms
+20-May-2020 23:25:45.027 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+20-May-2020 23:25:45.033 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+20-May-2020 23:25:45.306 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["https-jsse-nio-8443"]
+20-May-2020 23:25:45.306 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+20-May-2020 23:25:45.306 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+20-May-2020 23:25:45.353 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+20-May-2020 23:25:45.364 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+20-May-2020 23:25:45.368 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+20-May-2020 23:25:45.369 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["https-jsse-nio-8443"]
+20-May-2020 23:25:45.369 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["https-jsse-nio-8443"]
+20-May-2020 23:25:45.369 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+20-May-2020 23:25:45.369 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]
