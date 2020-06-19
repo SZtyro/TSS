@@ -4,35 +4,21 @@
         <servlet-name>mainServlet</servlet-name>
         <servlet-class>pl.webapplicationservlet.main.MainServlet</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>DeleteServlet</servlet-name>
-        <servlet-class>pl.webapplicationservlet.main.DeleteServlet</servlet-class>
-    </servlet>
-
     <servlet-mapping>
         <servlet-name>mainServlet</servlet-name>
         <url-pattern>/mainServlet</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>DeleteServlet</servlet-name>
-        <url-pattern>/DeleteServlet</url-pattern>
-    </servlet-mapping>
-    
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
         <welcome-file>mainServlet</welcome-file>
     </welcome-file-list>
-    
     <description>Zadanie TSS</description>
-    
     <resource-ref>
-        
         <res-ref-name>jdbc/bazaTestowaMSSQL</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
@@ -43,9 +29,7 @@
     <security-constraint>
         <web-resource-name>UsuwanieTylkoPrzezAdmina</web-resource-name>
         <web-resource-collection>
-            
-            <url-pattern>/DeleteServlet</url-pattern>
-            
+            <url-pattern>/mainServlet</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>admin</role-name>
@@ -54,8 +38,6 @@
             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
         </user-data-constraint>
     </security-constraint>
-    
-    
     <servlet>
         <servlet-name>jersey-servlet</servlet-name>
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
@@ -69,5 +51,4 @@
         <servlet-name>jersey-servlet</servlet-name>
         <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
-    
 </web-app>

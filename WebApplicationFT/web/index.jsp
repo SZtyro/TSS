@@ -1,4 +1,5 @@
 
+<%@page import="pl.data.CRUD"%>
 <%@page import="pl.data.DataLogic"%>
 <%@page import="pl.resources.Osoba"%>
 <%@page import="java.util.Map"%>
@@ -87,68 +88,45 @@
         </script>
     </head>
 
-    <body bgcolor="#e0e0e0">
+    <body bgcolor="#e0e0e0" >
 
 
 
         <h1>Autor projektu: </h1>
         <p>Fabian Trubic</p>
 
-
-        <h1>Aktualna data: </h1>
         <%
-            java.util.Date date = new java.util.Date();
-            out.println("<p>" + date + "</p>");
-            DataLogic logic = new DataLogic();
-            logic.fetchData();
-            ArrayList<Osoba> li = logic.lista;
+            //java.util.Date date = new java.util.Date();
+            //out.println("<p>" + date + "</p>");
+            //DataLogic logic = new DataLogic();
+            //CRUD crud = new CRUD();
+            //crud.setLogic(logic);
+            //ArrayList<Osoba> li = crud.fetchData();
+            //logic.fetchData();
+            
 
-            request.setAttribute("connection", logic.connection);
-            request.setAttribute("logic", logic);
-            request.setAttribute("list", li);
-            request.setAttribute("logic", logic);
+            //request.setAttribute("connection", logic.connection);
+            //request.setAttribute("logic", logic);
+            //request.setAttribute("list", li);
+            //request.setAttribute("logic", logic);
         %>
-
-
-
-        <table style="border: solid; width: 70%;margin: 0 auto" >
-            <tr>
-                <th>#</th>
-                <th>Imie</th>
-                <th>Nazwisko</th>
-                <th>Opis</th>
-                <th>Akcje</th>
-            </tr>
-            <tbody>
-
-                <c:forEach var="i" items="${list}" varStatus="loop">
-                    <tr>                   
-                        <td><c:out value="${i.id}"/> </td>
-                        <td><c:out value="${i.imie}"/> </td>
-                        <td><c:out value="${i.nazwisko}"/> </td>
-                        <td><c:out value="${i.opis}"/> </td>
-                        <td>
-                            <form method="post" action="DeleteServlet">
-                                <button style="background-color:#ff6347;border-radius:5px;border:none;" 
-                                        name="Usun" value="${i.id}">Usun
-                                    <input hidden type="submit">
-                                </button>
-                            </form>
-                        </td>
-                    </tr>
-                </c:forEach>
-
-
-            </tbody>
-        </table>
+        <!--
         <br>
-        <form method="post" action="mainServlet">
-            <input type="text" name="Id" value="Podaj id">
-            <input type="text" name="Imie" value="Podaj imie">
-            <input type="text" name="Nazwisko" value="Podaj nazwisko">
-            <input type="text" name="Opis" value="Podaj opis">
-            <input type="submit" value="Dodaj osobe">
+        <h1>Logowanie do bazy:</h1>
+        <p><i><strong>host:</strong> 155.158.112.31 <strong>user:</strong> tomcatuser <strong>password:</strong> tomcat</i></p>
+        <br>
+        <form method="post" action="mainServlet?method=login">
+            <input type="text" name="host" value="155.158.112.31">
+            <input type="text" name="user" value="tomcatuser">
+            <input type="password" name="password" value="tomcat">      
+            <input type="submit" value="Zaloguj">
         </form>
+        <br>
+        -->
+        <form  method="get" action="mainServlet">
+            <input type="submit" value="Baza danych">
+        </form>
+        
         <br>
         <h1>Komunikacja z WS</h1>
         <p id="messageID"></p>

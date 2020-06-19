@@ -4,16 +4,25 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import pl.data.CRUD;
 import pl.data.DataLogic;
 import pl.resources.Osoba;
 
 public class MainServlet extends HttpServlet {
 
-    ArrayList<Osoba> li = new ArrayList<Osoba>();
+    //ArrayList<Osoba> li = new ArrayList<Osoba>();
+    DataLogic dl = new DataLogic();
+    CRUD crud;
+
+    public MainServlet() throws SQLException, ClassNotFoundException {
+
+    }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -44,46 +53,72 @@ public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            this.crud = dl.connectDatabase();
+            request.getSession().setAttribute("list", crud.fetchData());
+
+            //javax.servlet.RequestDispatcher view = request.getRequestDispatcher("baza.jsp");
+            response.getWriter().print(request.getSession().getAttribute("list"));
+            System.out.println("lllllllllllllllllllllllllllllllllllllllllllllllllll");
+            //response.sendRedirect("https://localhost:8443/WebApplicationFT");
+            response.sendRedirect("baza.jsp");
+        } catch (SQLException ex) {
+            Logger.getLogger(MainServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(MainServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int wiek;
+        String method = request.getParameter("method");
         PrintWriter out = response.getWriter();
-        DataLogic dl = new DataLogic();
-        java.sql.Connection connection = dl.connectDatabase();
-        try {
-            //a.remove(Integer.parseInt((String)request.getParameter("Usun")) );
-            String sql = "INSERT INTO t_uzytkownik (id,dane,opis,imie,nazwisko) VALUES("
-                    + request.getParameter("Id") + ",null,'"
-                    + request.getParameter("Opis") + "','"
-                    + request.getParameter("Imie") + "','"
-                    + request.getParameter("Nazwisko") + "')";
-            
-            System.out.println(sql);
-            connection.createStatement().execute(sql);
 
-            out.println("<html>");
-            out.println("<body style=\"background-color:#2ECC71;text-align:center;\">");
-            out.println("<div style=\"color:white;font-weight:600;margin:30px;font-size:50px;\">Pomyslnie dodano uzytkownika!</div>");
-            out.println("<form "
-                    + "action=\"https://localhost:8443/WebApplicationFT\">"
-                    + "<input style=\"margin:20px;color:white;font-weight:700;width:100px;height:50px;background-color:#273746;border-radius:5px;border:none;\"  type=\"submit\" value=\"Powrot\"></form>");
-            out.println("</body>");
-            
-        } catch (SQLException ex) {
-            out.println("<html>");
-            out.println("<body style=\"background-color:#E74C3C;text-align:center;\">");
-            out.println("<div style=\"color:white;font-weight:600;margin:30px;font-size:50px;\">Blad: " + ex + "</div>");
-            out.println("<form "
-                    + "action=\"https://localhost:8443/WebApplicationFT\">"
-                    + "<input style=\"margin:20px;color:white;font-weight:700;width:100px;height:50px;background-color:#273746;border-radius:5px;border:none;\"  type=\"submit\" value=\"Powrot\"></form>");
-            out.println("</body>");
+        if (method.contains("post")) {
+
+            try {
+                if (crud == null) {
+                    request.getSession().setAttribute("message", "Brak polaczenia z baza danych!");
+                    request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                    response.sendRedirect("errorPage.jsp");
+                } else {
+                    crud.addUser(request.getParameter("Id"), request.getParameter("Opis"), request.getParameter("Imie"), request.getParameter("Nazwisko"));
+                    request.getSession().setAttribute("message", "Pomyslnie dodano uzytkownika");
+                    request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                    response.sendRedirect("successPage.jsp");
+                }
+
+            } catch (SQLException ex) {
+                request.getSession().setAttribute("message", ex);
+                request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                response.sendRedirect("errorPage.jsp");
+            }
+        } else if (method.contains("delete")) {
+            if (crud == null) {
+                request.getSession().setAttribute("message", "Brak polaczenia z baza danych!");
+                request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                response.sendRedirect("errorPage.jsp");
+            } else {
+                try {
+                    crud.deleteUser(request.getParameter("Usun"));
+                    request.getSession().setAttribute("message", "Pomyslnie usunieto uzytkownika");
+                    request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                    response.sendRedirect("successPage.jsp");
+                } catch (SQLException ex) {
+                    request.getSession().setAttribute("message", ex);
+                    request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                    response.sendRedirect("errorPage.jsp");
+                }
+            }
+
+        } else if (method.contains("edit")) {
+            request.getSession().setAttribute("message", "wiadomosc panie");
+            request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/edit.jsp");
+            //response.sendRedirect("edit.jsp");
+            response.sendRedirect("errorPage.jsp");
         }
-        
-
     }
 
     @Override

@@ -15,6 +15,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
+import pl.data.CRUD;
 import pl.data.DataLogic;
 import pl.resources.Osoba;
 
@@ -44,9 +45,11 @@ public class GenericResource {
     public List<Osoba> getJson() {
         List<Osoba> list = new ArrayList();
         DataLogic logic = new DataLogic();
-        logic.connectDatabase();
-        list = logic.lista;
-        return list;
+        //CRUD crud = new CRUD();
+        //logic.connectDatabase();
+        //crud.setLogic(logic);
+        //return crud.fetchData();
+        return null;
     }
 
     /**
