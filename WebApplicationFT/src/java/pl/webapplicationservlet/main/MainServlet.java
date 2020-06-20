@@ -22,7 +22,7 @@ public class MainServlet extends HttpServlet {
 
     public MainServlet() throws SQLException, ClassNotFoundException {
         dl = new DataLogic();
-        crud = dl.connectDatabase();
+        crud = dl.getConnectionFromContext();
         
     }
 
@@ -92,6 +92,7 @@ public class MainServlet extends HttpServlet {
             try {
 
                 crud.addUser(request.getParameter("Id"), request.getParameter("Opis"), request.getParameter("Imie"), request.getParameter("Nazwisko"));
+                request.getSession().setAttribute("list", crud.fetchData());
                 request.getSession().setAttribute("message", "Pomyslnie dodano uzytkownika");
                 request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
                 response.sendRedirect("successPage.jsp");
@@ -105,6 +106,7 @@ public class MainServlet extends HttpServlet {
 
             try {
                 crud.deleteUser(request.getParameter("Usun"));
+                request.getSession().setAttribute("list", crud.fetchData());
                 request.getSession().setAttribute("message", "Pomyslnie usunieto uzytkownika");
                 request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
                 response.sendRedirect("successPage.jsp");
@@ -132,6 +134,7 @@ public class MainServlet extends HttpServlet {
         } else if (method.contains("update")) {
             try {
                 crud.editUser(request.getParameter("id"), request.getParameter("Imie"), request.getParameter("Nazwisko"), request.getParameter("Opis"));
+                request.getSession().setAttribute("list", crud.fetchData());
                 request.getSession().setAttribute("message", "Pomyslnie edytowano uzytkownika");
                 request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
                 response.sendRedirect("successPage.jsp");

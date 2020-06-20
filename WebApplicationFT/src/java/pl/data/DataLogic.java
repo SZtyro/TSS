@@ -1,9 +1,12 @@
 package pl.data;
 
+
+import java.sql.DriverManager;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.sql.DriverManager;
-
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
 /**
  *
  * @author Fabian
@@ -34,27 +37,19 @@ public class DataLogic {
 
     }
 
-    public static java.sql.Connection getConnectionFromContext(String serwerType) throws SQLException {
-
+   public CRUD getConnectionFromContext() {
+        
         try {
-
-            javax.naming.Context initContext = new javax.naming.InitialContext();
-            javax.naming.Context envContext = (javax.naming.Context) initContext.lookup("java:/comp/env");
-            javax.sql.DataSource ds_mysql = (javax.sql.DataSource) envContext.lookup("jdbc/bazaTestowaMySQL");
-            javax.sql.DataSource ds_mssql = (javax.sql.DataSource) envContext.lookup("jdbc/bazaTestowaMSSQL");
-            java.sql.Connection connection;
-            if (serwerType.equals("mysql")) {
-                connection = ds_mysql.getConnection();
-                return connection;
-            }
-            if (serwerType.equals("mssql")) {
-                connection = ds_mssql.getConnection();
-                return connection;
-            }
-            return null;
-        } catch (Exception ex) {
-            throw new SQLException("Nie pobrano połączenia z kontekstu");
-        }
+            Context initContext = new InitialContext();
+            Context envContext  = (Context)initContext.lookup("java:/comp/env");
+            DataSource ds_mssql = (DataSource)envContext.lookup("jdbc/bazaTestowaMSSQL");
+            
+            connection = ds_mssql.getConnection();        
+        } catch(Exception ex) {
+            ex.printStackTrace();
+        }   
+        
+        return new CRUD(connection);
     }
 
     public void closeConnection() throws SQLException{

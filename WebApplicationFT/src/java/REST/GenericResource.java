@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pl.webapplicationservlet.main;
+package REST;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -31,35 +31,16 @@ public class GenericResource {
     @Context
     private UriInfo context;
 
-    /**
-     * Creates a new instance of GenericResource
-     */
     public GenericResource() {
     }
 
-    /**
-     * Retrieves representation of an instance of pl.webapplicationservlet.main.GenericResource
-     * @return an instance of java.lang.String
-     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Osoba> getJson() throws SQLException, ClassNotFoundException {   
         DataLogic logic = new DataLogic();
         List<Osoba> lista = logic.connectDatabase().fetchData();
-        //logic.closeConnection();
-        //CRUD crud = new CRUD();
-        //logic.connectDatabase();
-        //crud.setLogic(logic);
-        //return crud.fetchData();
+
         return lista;
     }
 
-    /**
-     * PUT method for updating or creating an instance of GenericResource
-     * @param content representation for the resource
-     */
-//    @PUT
-//    @Consumes(MediaType.APPLICATION_JSON)
-//    public void putJson(String content) {
-//    }
 }

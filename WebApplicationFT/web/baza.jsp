@@ -14,9 +14,8 @@
         
     </style>
     <body>
-        <form method="get" action="mainServlet">
-            <input type="submit" value="Odswiez baze">
-        </form>
+        
+        <a href="https://localhost:8443/WebApplicationFT/"><button>Menu</button></a>
 
         <table style="border: solid; width: 70%;margin: 0 auto" >
             <tr>
