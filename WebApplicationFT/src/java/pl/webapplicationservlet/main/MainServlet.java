@@ -17,11 +17,13 @@ import pl.resources.Osoba;
 public class MainServlet extends HttpServlet {
 
     //ArrayList<Osoba> li = new ArrayList<Osoba>();
-    DataLogic dl = new DataLogic();
+    DataLogic dl;
     CRUD crud;
 
     public MainServlet() throws SQLException, ClassNotFoundException {
-
+        dl = new DataLogic();
+        crud = dl.connectDatabase();
+        
     }
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)

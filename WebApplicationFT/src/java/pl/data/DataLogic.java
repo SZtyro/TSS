@@ -57,4 +57,7 @@ public class DataLogic {
         }
     }
 
+    public void closeConnection() throws SQLException{
+        connection.close();
+    }
 }

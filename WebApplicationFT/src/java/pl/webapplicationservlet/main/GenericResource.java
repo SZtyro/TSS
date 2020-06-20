@@ -5,6 +5,7 @@
  */
 package pl.webapplicationservlet.main;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ws.rs.core.Context;
@@ -42,14 +43,15 @@ public class GenericResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Osoba> getJson() {
-        List<Osoba> list = new ArrayList();
+    public List<Osoba> getJson() throws SQLException, ClassNotFoundException {   
         DataLogic logic = new DataLogic();
+        List<Osoba> lista = logic.connectDatabase().fetchData();
+        //logic.closeConnection();
         //CRUD crud = new CRUD();
         //logic.connectDatabase();
         //crud.setLogic(logic);
         //return crud.fetchData();
-        return null;
+        return lista;
     }
 
     /**
