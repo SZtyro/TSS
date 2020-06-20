@@ -7,9 +7,17 @@
         <meta http-equiv="Content-Type" content="text/html; charset=windows-1250">
         <title>Baza danych</title>
     </head>
-
+    <style>
+        tr:hover{
+            background-color: #707070;
+        }
+        
+    </style>
     <body>
-        <button>Odswiez</button>
+        <form method="get" action="mainServlet">
+            <input type="submit" value="Odswiez baze">
+        </form>
+
         <table style="border: solid; width: 70%;margin: 0 auto" >
             <tr>
                 <th>#</th>
@@ -22,27 +30,27 @@
 
                 <c:forEach var="i" items="${list}" varStatus="loop">
 
-                    <tr>                   
+                    <tr style="height:40px;">                   
                         <td><c:out value="${i.id}"/> </td>
                         <td><c:out value="${i.imie}"/> </td>
                         <td><c:out value="${i.nazwisko}"/> </td>
                         <td><c:out value="${i.opis}"/> </td>
-                        <td>
-                            <div style="display: flex;">
-                                <form method="post" action="mainServlet?method=delete">
-                                <button style="background-color:#ff6347;border-radius:5px;border:none;" 
-                                        name="Usun" value="${i.id}">Usun
-                                    <input hidden type="submit">
-                                </button>
-                            </form>
-                            <form method="post" action="mainServlet?method=edit">
-                                <button style="background-color:#ff6347;border-radius:5px;border:none;" 
-                                        name="Edytuj" value="${i.id}">Edytuj
-                                    <input hidden type="submit">
-                                </button>
-                            </form>
+                        <td >
+                            <div style="display: flex; ">
+                                <form method="post" action="mainServlet?method=delete" style="width:95%">
+                                    <button style="background-color:#ff6347;border-radius:5px;border:none;height:40px;width:95%" 
+                                            name="Usun" value="${i.id}">Usun
+                                        <input hidden type="submit">
+                                    </button>
+                                </form>
+                                <form method="post" action="mainServlet?method=edit" style="width:95%">
+                                    <button style="background-color:#34abeb;border-radius:5px;border:none;height:40px;width:95%" 
+                                            name="Edytuj" value="${i.id}">Edytuj
+                                        <input hidden type="submit">
+                                    </button>
+                                </form>
                             </div>
-                            
+
                         </td>
                     </tr>
                 </c:forEach>
@@ -51,7 +59,7 @@
             </tbody>
         </table>
         <br>
-        <form method="post" action="mainServlet?method=post">
+        <form method="post" action="mainServlet?method=add">
             <input type="text" name="Id" value="Podaj id">
             <input type="text" name="Imie" value="Podaj imie">
             <input type="text" name="Nazwisko" value="Podaj nazwisko">

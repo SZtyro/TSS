@@ -29,7 +29,7 @@
     <security-constraint>
         <web-resource-name>UsuwanieTylkoPrzezAdmina</web-resource-name>
         <web-resource-collection>
-            <url-pattern>/mainServlet</url-pattern>
+            <url-pattern>/TESTmainServlet</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>admin</role-name>

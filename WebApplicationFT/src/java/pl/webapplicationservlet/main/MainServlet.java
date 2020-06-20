@@ -60,6 +60,7 @@ public class MainServlet extends HttpServlet {
             //javax.servlet.RequestDispatcher view = request.getRequestDispatcher("baza.jsp");
             response.getWriter().print(request.getSession().getAttribute("list"));
             System.out.println("lllllllllllllllllllllllllllllllllllllllllllllllllll");
+            System.out.println(request.getSession().getAttribute("list"));
             //response.sendRedirect("https://localhost:8443/WebApplicationFT");
             response.sendRedirect("baza.jsp");
         } catch (SQLException ex) {
@@ -74,21 +75,24 @@ public class MainServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String method = request.getParameter("method");
-        PrintWriter out = response.getWriter();
 
-        if (method.contains("post")) {
+        if (crud == null) {
+            try {
+                crud = dl.connectDatabase();
+            } catch (Exception ex) {
+                request.getSession().setAttribute("message", ex);
+                request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                response.sendRedirect("errorPage.jsp");
+            }
+        }
+        if (method.contains("add")) {
 
             try {
-                if (crud == null) {
-                    request.getSession().setAttribute("message", "Brak polaczenia z baza danych!");
-                    request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
-                    response.sendRedirect("errorPage.jsp");
-                } else {
-                    crud.addUser(request.getParameter("Id"), request.getParameter("Opis"), request.getParameter("Imie"), request.getParameter("Nazwisko"));
-                    request.getSession().setAttribute("message", "Pomyslnie dodano uzytkownika");
-                    request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
-                    response.sendRedirect("successPage.jsp");
-                }
+
+                crud.addUser(request.getParameter("Id"), request.getParameter("Opis"), request.getParameter("Imie"), request.getParameter("Nazwisko"));
+                request.getSession().setAttribute("message", "Pomyslnie dodano uzytkownika");
+                request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                response.sendRedirect("successPage.jsp");
 
             } catch (SQLException ex) {
                 request.getSession().setAttribute("message", ex);
@@ -96,28 +100,44 @@ public class MainServlet extends HttpServlet {
                 response.sendRedirect("errorPage.jsp");
             }
         } else if (method.contains("delete")) {
-            if (crud == null) {
-                request.getSession().setAttribute("message", "Brak polaczenia z baza danych!");
+
+            try {
+                crud.deleteUser(request.getParameter("Usun"));
+                request.getSession().setAttribute("message", "Pomyslnie usunieto uzytkownika");
+                request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                response.sendRedirect("successPage.jsp");
+            } catch (SQLException ex) {
+                request.getSession().setAttribute("message", ex);
                 request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
                 response.sendRedirect("errorPage.jsp");
-            } else {
-                try {
-                    crud.deleteUser(request.getParameter("Usun"));
-                    request.getSession().setAttribute("message", "Pomyslnie usunieto uzytkownika");
-                    request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
-                    response.sendRedirect("successPage.jsp");
-                } catch (SQLException ex) {
-                    request.getSession().setAttribute("message", ex);
-                    request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
-                    response.sendRedirect("errorPage.jsp");
-                }
             }
 
         } else if (method.contains("edit")) {
-            request.getSession().setAttribute("message", "wiadomosc panie");
             request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/edit.jsp");
-            //response.sendRedirect("edit.jsp");
-            response.sendRedirect("errorPage.jsp");
+            String id = request.getParameter("Edytuj");
+            try {
+                request.getSession().setAttribute("editOsoba", crud.getUser(id));
+                response.sendRedirect("edit.jsp");
+            } catch (SQLException ex) {
+                request.getSession().setAttribute("message", ex);
+                request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                response.sendRedirect("errorPage.jsp");
+
+            }
+
+            //crud.deleteUser(request.getParameter("Usun"));
+            //response.sendRedirect("errorPage.jsp");
+        } else if (method.contains("update")) {
+            try {
+                crud.editUser(request.getParameter("id"), request.getParameter("Imie"), request.getParameter("Nazwisko"), request.getParameter("Opis"));
+                request.getSession().setAttribute("message", "Pomyslnie edytowano uzytkownika");
+                request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                response.sendRedirect("successPage.jsp");
+            } catch (SQLException ex) {
+                request.getSession().setAttribute("message", ex);
+                request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
+                response.sendRedirect("errorPage.jsp");
+            }
         }
     }
 

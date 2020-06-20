@@ -764,3 +764,17 @@
 0:0:0:0:0:0:0:1 - - [19/Jun/2020:09:25:59 +0200] "GET /WebApplicationFT/mainServlet? HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - ide [19/Jun/2020:09:25:59 +0200] "GET /WebApplicationFT/mainServlet? HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - ide [19/Jun/2020:09:26:00 +0200] "GET /WebApplicationFT/baza.jsp HTTP/1.1" 200 7668
+127.0.0.1 - - [19/Jun/2020:09:26:26 +0200] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [19/Jun/2020:09:26:26 +0200] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [19/Jun/2020:09:26:26 +0200] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - ide [19/Jun/2020:09:26:26 +0200] "GET /manager/text/list HTTP/1.1" 200 653
+127.0.0.1 - - [19/Jun/2020:09:26:26 +0200] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+0:0:0:0:0:0:0:1 - - [19/Jun/2020:09:26:26 +0200] "GET /WebApplicationFT HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [19/Jun/2020:09:26:26 +0200] "GET /WebApplicationFT/ HTTP/1.1" 200 3943
+0:0:0:0:0:0:0:1 - - [19/Jun/2020:09:26:27 +0200] "GET /WebApplicationFT/endpoint HTTP/1.1" 101 -
+0:0:0:0:0:0:0:1 - - [19/Jun/2020:09:26:28 +0200] "GET /WebApplicationFT/mainServlet? HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - ide [19/Jun/2020:09:26:28 +0200] "GET /WebApplicationFT/mainServlet? HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - ide [19/Jun/2020:09:26:28 +0200] "GET /WebApplicationFT/baza.jsp HTTP/1.1" 200 7278
+127.0.0.1 - - [19/Jun/2020:10:15:06 +0200] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [19/Jun/2020:10:15:06 +0200] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - - [19/Jun/2020:10:15:06 +0200] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -

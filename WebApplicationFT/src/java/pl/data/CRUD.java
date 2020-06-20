@@ -6,7 +6,9 @@
 package pl.data;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import pl.resources.Osoba;
 
@@ -47,7 +49,7 @@ public class CRUD {
             String sKomunikat = ex.toString();
             System.out.println(ex);
             return null;
-        } 
+        }
 
     }
 
@@ -60,11 +62,35 @@ public class CRUD {
 
         System.out.println(sql);
         connection.createStatement().execute(sql);
-        
+
     }
 
     public void deleteUser(String id) throws SQLException {
         connection.createStatement().execute("DELETE FROM t_uzytkownik WHERE id=" + id);
-        
+
+    }
+
+    public void editUser(String id, String imie, String nazwisko,String opis) throws SQLException {
+        String sql = "UPDATE t_uzytkownik SET imie='" + imie + "', nazwisko='" + nazwisko + "', opis='" + opis + "' WHERE id=" + id;
+        connection.createStatement().execute(sql);
+        System.out.println(sql);
+    }
+
+    public Osoba getUser(String id) throws SQLException {
+        String sQuery = "SELECT * FROM t_uzytkownik where id=" + id;
+        java.sql.ResultSet wynikZapytania;
+        Statement st = connection.createStatement();
+        st.execute(sQuery);
+        ResultSet rs = st.getResultSet();
+        rs.next();
+
+        Osoba toReturn = new Osoba(
+                rs.getInt("id"),
+                rs.getString("imie"),
+                rs.getString("nazwisko"),
+                rs.getString("opis")
+        );
+
+        return toReturn;
     }
 }
