@@ -9235,3 +9235,16 @@ Caused by: java.io.IOException: Nawi¹zane po³¹czenie zosta³o przerwane przez opr
 20-Jun-2020 13:00:07.747 INFO [http-nio-8080-exec-321] org.glassfish.jersey.server.ApplicationHandler.initialize Initiating Jersey application, version Jersey: 2.5.1 2014-01-02 13:43:00...
 20-Jun-2020 13:00:08.049 INFO [http-nio-8080-exec-321] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of configuration descriptor C:\Users\fabix\Desktop\TSS\tss\tomcat\conf\Catalina\localhost\WebApplicationFT.xml has finished in 2,063 ms
 20-Jun-2020 13:00:08.203 INFO [http-nio-8080-exec-326] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplicationFT]] after start() had already been called. The second call will be ignored.
+20-Jun-2020 13:06:58.926 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+20-Jun-2020 13:06:58.927 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+20-Jun-2020 13:06:59.346 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["https-jsse-nio-8443"]
+20-Jun-2020 13:06:59.693 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+20-Jun-2020 13:07:00.032 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service Catalina
+20-Jun-2020 13:07:00.056 WARNING [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [WebApplicationFT] registered the JDBC driver [com.microsoft.sqlserver.jdbc.SQLServerDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+20-Jun-2020 13:07:00.056 SEVERE [localhost-startStop-2] org.apache.catalina.loader.WebappClassLoaderBase.checkThreadLocalMapForLeaks The web application [WebApplicationFT] created a ThreadLocal with key of type [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1] (value [com.microsoft.sqlserver.jdbc.ActivityCorrelator$1@362d9c73]) and a value of type [com.microsoft.sqlserver.jdbc.ActivityId] (value [aba1c33c-2a35-4eb9-891e-e7f28943cea0-1]) but failed to remove it when the web application was stopped. Threads are going to be renewed over time to try and avoid a probable memory leak.
+20-Jun-2020 13:07:00.066 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+20-Jun-2020 13:07:00.068 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["https-jsse-nio-8443"]
+20-Jun-2020 13:07:00.069 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+20-Jun-2020 13:07:00.070 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+20-Jun-2020 13:07:00.071 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["https-jsse-nio-8443"]
+20-Jun-2020 13:07:00.071 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

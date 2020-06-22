@@ -3,10 +3,10 @@ package pl.resources;
 
 public class Osoba {
 
-    public int id;
-    public String imie;
-    public String nazwisko;
-    public String opis;
+    private int id;
+    private String imie;
+    private String nazwisko;
+    private String opis;
 
     public int getId() {
         return id;

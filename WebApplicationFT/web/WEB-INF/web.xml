@@ -39,10 +39,11 @@
     </login-config> 
     
     <security-constraint>           
-        <web-resource-name>UsuwanieTylkoPrzezAdmina</web-resource-name>
+        <web-resource-name>Admina</web-resource-name>
         <web-resource-collection>
-            <url-pattern>/mainServlet</url-pattern>
+            
             <url-pattern>/index.jsp</url-pattern>
+            <url-pattern>/mainServlet</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <role-name>admin</role-name>
@@ -57,7 +58,7 @@
         <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
         <init-param>
             <param-name>jersey.config.server.provider.packages</param-name>
-            <param-value>pl.webapplicationservlet.main, com.fasterxml.jackson.jaxrs.json</param-value>
+            <param-value>REST, com.fasterxml.jackson.jaxrs.json</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>

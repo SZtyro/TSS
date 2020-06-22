@@ -43,7 +43,17 @@
         description="User database that can be updated and saved"
         factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
         pathname="conf/tomcat-users.xml" />-->
-        <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" maxActive="100" maxIdle="30" maxWait="10000" name="jdbc/authority" password="tomcat" type="javax.sql.DataSource" url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth" username="tomcatuser"/>
+        <Resource 
+            auth="Container" 
+            driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
+            maxActive="100" 
+            maxIdle="30" 
+            maxWait="10000" 
+            name="jdbc/authority" 
+            password="tomcat" 
+            type="javax.sql.DataSource"            
+            url="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth" 
+            username="tomcatuser"/>
     </GlobalNamingResources>
 
     <!-- A "Service" is a collection of one or more "Connectors" that share
@@ -67,7 +77,12 @@
              APR (HTTP/AJP) Connector: /docs/apr.html
              Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
         -->
-        <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443" server="Apache-Coyote/1.1"/>
+        <Connector 
+            connectionTimeout="20000" 
+            port="8080" 
+            protocol="HTTP/1.1" 
+            redirectPort="8443" 
+            server="Apache-Coyote/1.1"/>
         <!-- A "Connector" using the shared thread pool-->
         <!--
         <Connector executor="tomcatThreadPool"
@@ -84,7 +99,18 @@
              the SSLImplementation selected. JSSE style configuration is used below.
         -->
     
-        <Connector SSLEnabled="true" clientAuth="false" keyAlias="tomcat" keystoreFile="conf/klucz.jks" keystorePass="123456" maxThreads="150" port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol" scheme="https" secure="true" sslProtocol="TLS">
+        <Connector        
+            SSLEnabled="true" 
+            clientAuth="false" 
+            keyAlias="tomcat" 
+            keystoreFile="conf/klucz.jks" 
+            keystorePass="123456" 
+            maxThreads="150" 
+            port="8443" 
+            protocol="org.apache.coyote.http11.Http11NioProtocol" 
+            scheme="https" 
+            secure="true" 
+            sslProtocol="TLS">
             <!--<SSLHostConfig>
                 <Certificate certificateKeystoreFile="conf/localhost-rsa.jks"
                              type="RSA" />
@@ -143,9 +169,24 @@
                 resourceName="UserDatabase"/>-->
       
       
-                <Realm className="org.apache.catalina.realm.DataSourceRealm" dataSourceName="jdbc/authority" roleNameCol="role_name" userCredCol="user_pass" userNameCol="user_name" userRoleTable="user_roles" userTable="users"/>
+                <Realm 
+                    className="org.apache.catalina.realm.DataSourceRealm" 
+                    dataSourceName="jdbc/authority" 
+                    roleNameCol="role_name" 
+                    userCredCol="user_pass" 
+                    userNameCol="user_name" 
+                    userRoleTable="user_roles" 
+                    userTable="users"/>
         
-                <Realm className="org.apache.catalina.realm.JDBCRealm" connectionURL="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth;user=tomcatuser;password=tomcat" driverName="com.microsoft.sqlserver.jdbc.SQLServerDriver" roleNameCol="role_name" userCredCol="user_pass" userNameCol="user_name" userRoleTable="user_roles" userTable="users"/>
+                <Realm 
+                    className="org.apache.catalina.realm.JDBCRealm" 
+                    connectionURL="jdbc:sqlserver://155.158.112.31:1433;databaseName=tomcatAuth;user=tomcatuser;password=tomcat" 
+                    driverName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
+                    roleNameCol="role_name" 
+                    userCredCol="user_pass" 
+                    userNameCol="user_name" 
+                    userRoleTable="user_roles" 
+                    userTable="users"/>
             </Realm>
 
             <Host appBase="webapps" autoDeploy="true" name="localhost" unpackWARs="true">

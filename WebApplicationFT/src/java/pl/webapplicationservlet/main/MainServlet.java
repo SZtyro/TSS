@@ -56,18 +56,10 @@ public class MainServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            this.crud = dl.connectDatabase();
-            request.getSession().setAttribute("list", crud.fetchData());
-
-            //javax.servlet.RequestDispatcher view = request.getRequestDispatcher("baza.jsp");
-            response.getWriter().print(request.getSession().getAttribute("list"));
-            System.out.println("lllllllllllllllllllllllllllllllllllllllllllllllllll");
-            System.out.println(request.getSession().getAttribute("list"));
-            //response.sendRedirect("https://localhost:8443/WebApplicationFT");
+            this.crud = dl.getConnectionFromContext();
+            request.getSession().setAttribute("list", crud.fetchData());        
             response.sendRedirect("baza.jsp");
         } catch (SQLException ex) {
-            Logger.getLogger(MainServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ClassNotFoundException ex) {
             Logger.getLogger(MainServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
 
@@ -80,7 +72,7 @@ public class MainServlet extends HttpServlet {
 
         if (crud == null) {
             try {
-                crud = dl.connectDatabase();
+                crud = dl.getConnectionFromContext();
             } catch (Exception ex) {
                 request.getSession().setAttribute("message", ex);
                 request.getSession().setAttribute("link", "https://localhost:8443/WebApplicationFT/baza.jsp");
